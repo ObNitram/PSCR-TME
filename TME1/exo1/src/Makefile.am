@@ -5,7 +5,7 @@ INC_DIR = $(top_builddir)/include
 SRC_DIR = $(top_builddir)/src
 
 # Flags to compiler
-AM_CPPFLAGS =  -I $(INC_DIR) -g -Wall -std=c++1y
+AM_CPPFLAGS =  -I $(INC_DIR) -g -O0 -Wall -std=c++1y
 
 # global LDFLAG  = Linker flags
 # AM_LDFLAGS = -pthread 

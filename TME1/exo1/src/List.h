@@ -5,48 +5,50 @@
 #include <string>
 #include <ostream>
 
-namespace pr {
+namespace pr
+{
+    class Chainon
+    {
+    public :
+        std::string data;
+        Chainon* next;
+        Chainon(const std::string& data, Chainon* next = nullptr);
+        size_t length();
+        void print(std::ostream& os) const;
+    };
 
-class Chainon {
-public :
-	std::string data;
-	Chainon * next;
-	Chainon (const std::string & data, Chainon * next=nullptr);
-	size_t length() ;
-	void print (std::ostream & os) const;
-};
+    class List
+    {
+    public:
+        Chainon* tete;
 
-class List {
-public:
+        List(): tete(nullptr)
+        {
+        }
 
-	Chainon * tete;
+        ~List()
+        {
+            for (Chainon* c = tete; c;)
+            {
+                Chainon* tmp = c->next;
+                delete c;
+                c = tmp;
+            }
+        }
 
-	List(): tete(nullptr)  {}
+        const std::string& operator[](size_t index) const;
 
-	~List() {
-		for (Chainon * c = tete ; c ; ) {
-			Chainon * tmp = c->next;
-			delete c;
-			c = tmp;
-		}
-	}
+        void push_back(const std::string& val);
 
-	const std::string & operator[] (size_t index) const ;
+        //FAUTE : implementation must be in List.cpp
+        void push_front(const std::string& val);
 
-	void push_back (const std::string& val) ;
+        bool empty();
 
-	void push_front (const std::string& val) {
-		tete = new Chainon(val,tete);
-	}
+        size_t size() const;
+    };
 
-	bool empty() ;
-
-	size_t size() const ;
-};
-
-
-std::ostream & operator<< (std::ostream & os, const List & vec) ;
-
+    std::ostream& operator<<(std::ostream& os, const List& vec);
 } /* namespace pr */
 
 #endif /* SRC_LIST_H_ */
