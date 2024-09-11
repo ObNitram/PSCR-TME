@@ -1,0 +1,24 @@
+
+# Build
+*.o
+.deps/
+
+# Compile tools genereted files
+*.m4
+*.log
+*.status
+compile
+configure
+depcomp
+install-sh
+Makefile
+makefile.in
+missing
+
+# build and cache
+build/
+autom4te.cache
+
+# exec
+exo*
+!exo*/
