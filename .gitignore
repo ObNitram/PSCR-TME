@@ -12,7 +12,7 @@ configure
 depcomp
 install-sh
 Makefile
-makefile.in
+Makefile.in
 missing
 
 # build and cache
