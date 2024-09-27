@@ -1,97 +1,97 @@
 #include <iostream>
-#include "src/MyString.hpp"
+#include "String.hpp"
 
 int main()
 {
     // Test 1: Création d'une chaîne à partir d'une chaîne littérale
     {
-        pr::MyString str1("Hello, World!");
+        pscr::String str1("Hello, World!");
         std::cout << "Test 1: " << str1 << std::endl;
     }
 
     // Test 2: Création d'une chaîne vide
     {
-        pr::MyString str2("");
+        pscr::String str2("");
         std::cout << "Test 2: " << str2 << std::endl;
     }
 
     // Test 3: Création d'une chaîne à partir de nullptr
     {
-        pr::MyString str3(nullptr);
+        pscr::String str3(nullptr);
         std::cout << "Test 3: " << str3 << std::endl;
     }
 
     // Test 4: Constructeur de copie
     {
-        pr::MyString str4("Copy Test");
-        pr::MyString str5(str4);
+        pscr::String str4("Copy Test");
+        pscr::String str5(str4);
         std::cout << "Test 4 (copie): " << str4 << str5 << std::endl;
     }
 
     // Test 5: Test d'auto-assignation
     {
-        pr::MyString str6("Auto-assign");
+        pscr::String str6("Auto-assign");
         str6 = str6;
         std::cout << "Test 5 (auto-assignation): " << str6 << std::endl;
     }
 
     // Test 6: Affectation de chaîne
     {
-        pr::MyString str7("Original");
-        pr::MyString str8("New");
+        pscr::String str7("Original");
+        pscr::String str8("New");
         str7 = str8;
         std::cout << "Test 6 (affectation): " << str7 << std::endl;
     }
 
     // Test 7: Constructeur de déplacement
     {
-        pr::MyString str9("Move Test");
-        pr::MyString str10(std::move(str9));
+        pscr::String str9("Move Test");
+        pscr::String str10(std::move(str9));
         std::cout << "Test 7 (déplacement): " << str10 << std::endl;
-        std::cout << "Test 7 (après déplacement de str9): " << str9 <<
+        std::cout << "Test 7 (apscrès déplacement de str9): " << str9 <<
             std::endl;
     }
 
     // Test 8: Affectation par déplacement
     {
-        pr::MyString str11("Temporary");
-        pr::MyString str12("Move Assign");
+        pscr::String str11("Temporary");
+        pscr::String str12("Move Assign");
         str11 = std::move(str12);
         std::cout << "Test 8 (affectation par déplacement): " << str11 <<
             std::endl;
     }
 
-    // Test 9: Libération de mémoire après destruction
+    // Test 9: Libération de mémoire apscrès destruction
     {
-        pr::MyString str13("Should be released");
+        pscr::String str13("Should be released");
         std::cout << "Test 9 (dans le bloc): " << str13 << std::endl;
     }
-    std::cout << "Test 9 (après le bloc): Aucun accès à str13" << std::endl;
+    std::cout << "Test 9 (apscrès le bloc): Aucun accès à str13" << std::endl;
 
     // Test 10: Vérification de la chaîne nulle dans le constructeur
     {
-        pr::MyString str14(nullptr);
+        pscr::String str14(nullptr);
         std::cout << "Test 10: " << str14 << std::endl;
     }
 
-    // Test 11: Vérification d'une chaîne vide après copie
+    // Test 11: Vérification d'une chaîne vide apscrès copie
     {
-        pr::MyString str15("");
-        pr::MyString str16(str15);
+        pscr::String str15("");
+        pscr::String str16(str15);
         std::cout << "Test 11: " << str16 << std::endl;
     }
 
     // Test 12: Affectation d'une chaîne vide
     {
-        pr::MyString str17("");
-        pr::MyString str18("Non-empty");
+        pscr::String str17("");
+        pscr::String str18("Non-empty");
         str17 = str18;
         std::cout << "Test 12: " << str17 << std::endl;
     }
 
     // Test 13: Test d'auto-assignation sur une chaîne vide
     {
-        pr::MyString str19("");
+        pscr::String str19("");
         str19 = str19;
         std::cout << "Test 13 (auto-assignation sur une chaîne vide): " << str19
             << std::endl;
@@ -99,7 +99,7 @@ int main()
 
     // Test 14: Test d'auto-assignation sur une chaîne non vide
     {
-        pr::MyString str20("Non-empty");
+        pscr::String str20("Non-empty");
         str20 = str20;
         std::cout << "Test 14 (auto-assignation sur une chaîne non vide): " <<
             str20 << std::endl;
@@ -107,46 +107,46 @@ int main()
 
     // Test 15: Déplacement d'une chaîne vide
     {
-        pr::MyString str21("Source");
-        pr::MyString str22 = std::move(str21);
+        pscr::String str21("Source");
+        pscr::String str22 = std::move(str21);
         std::cout << "Test 15 (déplacement de str22): " << str22 << std::endl;
-        std::cout << "Test 15 (après déplacement de str21): " << str21 <<
+        std::cout << "Test 15 (apscrès déplacement de str21): " << str21 <<
             std::endl;
     }
 
     // Test 16: Affectation avec une chaîne vide
     {
-        pr::MyString str23("");
+        pscr::String str23("");
         str23 = "Filled";
         std::cout << "Test 16: " << str23 << std::endl;
     }
 
     // Test 17: Affectation avec une chaîne nulle
     {
-        pr::MyString str24(nullptr);
+        pscr::String str24(nullptr);
         str24 = "Assigned";
         std::cout << "Test 17: " << str24 << std::endl;
     }
 
-    // Test 18: Vérification de la chaîne après destruction
+    // Test 18: Vérification de la chaîne apscrès destruction
     {
-        pr::MyString str25("Temp");
+        pscr::String str25("Temp");
         std::cout << "Test 18 (dans le bloc): " << str25 << std::endl;
     }
-    std::cout << "Test 18 (après le bloc): Aucun accès à str25" << std::endl;
+    std::cout << "Test 18 (apscrès le bloc): Aucun accès à str25" << std::endl;
 
-    // Test 19: Réassignation après déplacement
+    // Test 19: Réassignation apscrès déplacement
     {
-        pr::MyString str26("First");
-        pr::MyString str27("Second");
+        pscr::String str26("First");
+        pscr::String str27("Second");
         str26 = std::move(str27);
         std::cout << "Test 19: " << str26 << std::endl;
     }
 
     // Test 20: Copie d'une chaîne contenant des espaces
     {
-        pr::MyString str28("Hello World with spaces");
-        pr::MyString str29(str28);
+        pscr::String str28("Hello World with spaces");
+        pscr::String str29(str28);
         std::cout << "Test 20: " << str29 << std::endl;
     }
 
@@ -167,7 +167,7 @@ int main()
     for (int i = 0; i < 50; ++i)
     {
         {
-            pr::MyString testStr(testStrings[i]);
+            pscr::String testStr(testStrings[i]);
             std::cout << "Test " << (21 + i) << ": " << testStr << std::endl;
         }
     }
