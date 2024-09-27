@@ -6,7 +6,10 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Créer la bibliothèque statique en utilisant les fichiers sources
 add_library(PscrLib STATIC
-        src/private/String.cpp
+        src/private/HashTable.cpp src/public/HashTable.hpp
+        src/private/List.cpp src/public/List.hpp
+        src/private/String.cpp src/public/String.hpp
+        src/private/Vector.cpp src/public/Vector.hpp
 )
 
 # Spécifier les répertoires d'inclusion après la création de la bibliothèque
@@ -27,7 +30,8 @@ enable_testing()
 
 # Ajouter les tests
 add_executable(PscrLibTests
-        test/test.cpp  # Ajoute tes fichiers de test ici
+        test/StringTest.cpp
+        test/VectorTest.cpp
 )
 
 # Lier les tests avec Google Test et la bibliothèque PscrLib

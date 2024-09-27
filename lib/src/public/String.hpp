@@ -3,10 +3,8 @@
 
 namespace pscr
 {
-
 class String
 {
-
     char *str;
 
   public:
