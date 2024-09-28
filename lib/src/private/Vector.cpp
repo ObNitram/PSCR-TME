@@ -3,4 +3,4 @@
 namespace pscr
 {
 
-}
+} // namespace pscr
