@@ -32,6 +32,7 @@ enable_testing()
 add_executable(PscrLibTests
         test/StringTest.cpp
         test/VectorTest.cpp
+        test/ListTest.cpp
 )
 
 # Lier les tests avec Google Test et la bibliothèque PscrLib
