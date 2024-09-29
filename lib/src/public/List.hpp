@@ -1,5 +1,5 @@
 #pragma once
-#include <algorithm>
+#include <utility>
 #include <cassert>
 #include <cstddef>
 
@@ -105,7 +105,7 @@ template <typename T> class List
         _size++;
     }
 
-    size_t size() const { return _size; }
-    bool isEmpty() const { return head == nullptr; }
+    [[nodiscard]] size_t size() const { return _size; }
+    [[nodiscard]] bool isEmpty() const { return head == nullptr; }
 };
 } // namespace pscr

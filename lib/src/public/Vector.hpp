@@ -1,6 +1,7 @@
 #pragma once
 #include <cassert>
 #include <cstddef>
+#include <utility>
 
 namespace pscr
 {
@@ -11,12 +12,12 @@ template <typename T> class Vector
     T *_data;
 
   public:
-    Vector(const size_t capacity = 10)
+    Vector(const size_t size = 10)
     {
-        assert(capacity > 0);
-        _size = 0;
-        _capacity = capacity;
-        _data = new T[capacity];
+        assert(size > 0);
+        _size = size;
+        _capacity = size;
+        _data = new T[size];
     }
 
     Vector(const Vector &other)
@@ -30,7 +31,7 @@ template <typename T> class Vector
     {
         _size = other._size;
         _capacity = other._capacity;
-        _data = other._data;
+        std::swap(_data, other._data);
 
         other._size = 0;
         other._capacity = 0;
@@ -91,9 +92,9 @@ template <typename T> class Vector
         _data[_size++] = val;
     }
 
-    size_t size() const { return _size; }
+    [[nodiscard]] size_t size() const { return _size; }
 
-    bool isEmpty() const { return _size == 0; }
+    [[nodiscard]] bool isEmpty() const { return _size == 0; }
 
   private:
     void ensure_capacity()

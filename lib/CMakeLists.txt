@@ -33,6 +33,7 @@ add_executable(PscrLibTests
         test/StringTest.cpp
         test/VectorTest.cpp
         test/ListTest.cpp
+        test/HashTableTest.cpp
 )
 
 # Lier les tests avec Google Test et la bibliothèque PscrLib

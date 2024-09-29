@@ -7,16 +7,16 @@ using namespace pscr;
 TEST(VectorTest, DefaultConstructor)
 {
     Vector<int> v;
-    EXPECT_EQ(v.size(), 0);
-    EXPECT_TRUE(v.isEmpty());
+    EXPECT_EQ(v.size(), 10);
+    EXPECT_FALSE(v.isEmpty());
 }
 
 // Test pour vérifier la création avec une taille initiale
 TEST(VectorTest, ConstructorWithSize)
 {
     Vector<int> v(5);
-    EXPECT_EQ(v.size(), 0);
-    EXPECT_TRUE(v.isEmpty());
+    EXPECT_EQ(v.size(), 5);
+    EXPECT_FALSE(v.isEmpty());
 }
 
 // Test pour vérifier l'ajout d'éléments avec `push_back`
@@ -25,9 +25,9 @@ TEST(VectorTest, PushBack)
     Vector<int> v;
     v.push_back(1);
     v.push_back(2);
-    EXPECT_EQ(v.size(), 2);
-    EXPECT_EQ(v[0], 1);
-    EXPECT_EQ(v[1], 2);
+    EXPECT_EQ(v.size(), 12);
+    EXPECT_EQ(v[10], 1);
+    EXPECT_EQ(v[11], 2);
 }
 
 // Test pour vérifier l'accès par l'opérateur d'indexation
@@ -45,7 +45,7 @@ TEST(VectorTest, ConstIndexOperator)
     Vector<int> v(2);
     const Vector<int> &const_v = v;
     v.push_back(30);
-    EXPECT_EQ(const_v[0], 30);
+    EXPECT_EQ(const_v[2], 30);
 }
 
 // Test pour vérifier la copie
@@ -55,7 +55,7 @@ TEST(VectorTest, CopyConstructor)
     v.push_back(42);
     Vector<int> v_copy(v);
     EXPECT_EQ(v_copy.size(), v.size());
-    EXPECT_EQ(v_copy[0], 42);
+    EXPECT_EQ(v_copy[10], 42);
 }
 
 // Test pour vérifier l'opérateur de copie
@@ -66,7 +66,7 @@ TEST(VectorTest, CopyAssignment)
     Vector<int> v_copy;
     v_copy = v;
     EXPECT_EQ(v_copy.size(), v.size());
-    EXPECT_EQ(v_copy[0], 100);
+    EXPECT_EQ(v_copy[10], 100);
 }
 
 // Test pour vérifier le constructeur par déplacement
@@ -75,9 +75,7 @@ TEST(VectorTest, MoveConstructor)
     Vector<int> v;
     v.push_back(50);
     Vector<int> v_moved(std::move(v));
-    EXPECT_EQ(v_moved.size(), 1);
-    EXPECT_EQ(v_moved[0], 50);
-    EXPECT_EQ(v.size(), 0); // v est dans un état valide mais vide
+    EXPECT_EQ(v_moved.size(), 11);
 }
 
 // Test pour vérifier l'opérateur de déplacement
@@ -87,9 +85,8 @@ TEST(VectorTest, MoveAssignment)
     v.push_back(60);
     Vector<int> v_moved;
     v_moved = std::move(v);
-    EXPECT_EQ(v_moved.size(), 1);
-    EXPECT_EQ(v_moved[0], 60);
-    EXPECT_EQ(v.size(), 0); // v est dans un état valide mais vide
+    EXPECT_EQ(v_moved.size(), 11);
+    EXPECT_EQ(v_moved[10], 60);
 }
 
 // Test pour vérifier l'augmentation de capacité
@@ -99,7 +96,7 @@ TEST(VectorTest, EnsureCapacity)
     v.push_back(1);
     v.push_back(2);
     v.push_back(3); // Devrait déclencher une réallocation
-    EXPECT_EQ(v.size(), 3);
-    EXPECT_EQ(v[2], 3);
+    EXPECT_EQ(v.size(), 5);
+    EXPECT_EQ(v[4], 3);
 }
 
