@@ -157,11 +157,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Google Test.StringTest.Constructor" />
-      <item itemvalue="Google Test.StringTest.CopyAssignment" />
-      <item itemvalue="Google Test.StringTest.CopyConstructor" />
       <item itemvalue="CTest Application.All CTest" />
       <item itemvalue="Google Test.All in PscrLibTests" />
+      <item itemvalue="Google Test.StringTest.CopyConstructor" />
+      <item itemvalue="Google Test.StringTest.Constructor" />
+      <item itemvalue="Google Test.StringTest.CopyAssignment" />
     </list>
     <recent_temporary>
       <list>
@@ -186,7 +186,8 @@
       <workItem from="1727534024962" duration="4625000" />
       <workItem from="1727554306986" duration="5888000" />
       <workItem from="1727612445320" duration="6354000" />
-      <workItem from="1727697483565" duration="4000" />
+      <workItem from="1727697483565" duration="569000" />
+      <workItem from="1727698572514" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />
@@ -236,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727618793591</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="# add remove upgrade fix format refactor change&#10;add class configuration of HashTable and Vector&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727697930512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697930512</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +264,8 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add List to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add HashTable to PscrLib&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;add HashTable to PscrLib&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add class configuration of HashTable and Vector&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;add class configuration of HashTable and Vector&#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

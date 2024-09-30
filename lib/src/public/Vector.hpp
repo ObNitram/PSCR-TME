@@ -53,7 +53,6 @@ template <typename T> class Vector
 
         _size = other._size;
         _capacity = other._capacity;
-        _data = new T[other._capacity];
         for (size_t i = 0; i < _size; i++) { _data[i] = other._data[i]; }
         return *this;
     }
@@ -62,15 +61,9 @@ template <typename T> class Vector
     {
         if (&other == this) { return *this; }
 
-        delete[] _data;
-
-        _size = other._size;
-        _capacity = other._capacity;
-        _data = other._data;
-
-        other._size = 0;
-        other._capacity = 0;
-        other._data = nullptr;
+        std::swap(_data, other._data);
+        std::swap(_size, other._size);
+        std::swap(_capacity, other._capacity);
 
         return *this;
     }
@@ -107,7 +100,7 @@ template <typename T> class Vector
         _capacity = _capacity * grow_factor;
         T *new_data = new T[_capacity];
 
-        for (size_t i = 0; i < _size; i++) { new_data[i] = _data[i]; }
+        for (size_t i = 0; i < _size; i++) { new_data[i] = std::move(_data[i]); }
 
         delete[] _data;
         _data = new_data;

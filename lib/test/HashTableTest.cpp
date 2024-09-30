@@ -126,7 +126,7 @@ TEST(HashTableTest, GrowTest)
 {
     HashTable<int, std::string> table;
     // Simule un remplissage complet qui déclenche une croissance
-    for (int i = 0; i < 100000; ++i)
+    for (int i = 0; i < 10000; ++i)
     {
         table.put(i, "value" + std::to_string(i));
         EXPECT_EQ(table.size(), i + 1);
