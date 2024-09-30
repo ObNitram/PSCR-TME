@@ -49,10 +49,10 @@ template <typename T> class Vector
         {
             delete[] _data;
             _data = new T[other._capacity];
+            _capacity = other._capacity;
         }
 
         _size = other._size;
-        _capacity = other._capacity;
         for (size_t i = 0; i < _size; i++) { _data[i] = other._data[i]; }
         return *this;
     }
