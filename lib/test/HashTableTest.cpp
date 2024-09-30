@@ -53,8 +53,6 @@ TEST(HashTableTest, GetNonExistingKey)
 TEST(HashTableTest, HandleCollisions)
 {
     HashTable<int, std::string> table;
-    size_t bucket_size = 1000;
-    // Ajout de deux clés différentes mais qui pourraient se retrouver dans le même seau
     table.put(1, "one");
     table.put(1001, "one thousand and one");
 
@@ -128,7 +126,7 @@ TEST(HashTableTest, GrowTest)
 {
     HashTable<int, std::string> table;
     // Simule un remplissage complet qui déclenche une croissance
-    for (int i = 0; i < 10000; ++i)
+    for (int i = 0; i < 100000; ++i)
     {
         table.put(i, "value" + std::to_string(i));
         EXPECT_EQ(table.size(), i + 1);

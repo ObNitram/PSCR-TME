@@ -9,7 +9,9 @@ namespace pscr
 {
 template <typename K, typename V> class HashTable
 {
-    const size_t bukets_size = 1;
+    static constexpr  size_t default_buckets_size = 100;
+    static constexpr  size_t grow_factor = 2;
+    static constexpr  float max_load_factor = 0.8f;
 
     struct Entry
     {
@@ -23,7 +25,7 @@ template <typename K, typename V> class HashTable
   public:
     HashTable()
     {
-        buckets = Vector<List<Entry>>(bukets_size);
+        buckets = Vector<List<Entry>>(default_buckets_size);
         _size = 0;
     }
 
@@ -88,7 +90,7 @@ template <typename K, typename V> class HashTable
             }
         }
 
-        if (_size > buckets.size() * 0.8f) grow();
+        if (_size > buckets.size() * max_load_factor) grow();
         index = std::hash<K>{}(key) % buckets.size();
 
         buckets[index].push_back({key, value});
@@ -101,7 +103,7 @@ template <typename K, typename V> class HashTable
   private:
     void grow()
     {
-        Vector<List<Entry>> new_buckets(buckets.size() * 2);
+        Vector<List<Entry>> new_buckets(buckets.size() * grow_factor);
 
         for (int i = 0; i < buckets.size(); ++i)
         {

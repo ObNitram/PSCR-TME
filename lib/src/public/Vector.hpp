@@ -7,12 +7,15 @@ namespace pscr
 {
 template <typename T> class Vector
 {
+    static constexpr size_t default_size = 10;
+    static constexpr size_t grow_factor = 2;
+
     size_t _size;
     size_t _capacity;
     T *_data;
 
   public:
-    Vector(const size_t size = 10)
+    Vector(const size_t size = default_size)
     {
         assert(size > 0);
         _size = size;
@@ -101,7 +104,7 @@ template <typename T> class Vector
     {
         if (_size < _capacity) { return; }
 
-        _capacity = _capacity * 2;
+        _capacity = _capacity * grow_factor;
         T *new_data = new T[_capacity];
 
         for (size_t i = 0; i < _size; i++) { new_data[i] = _data[i]; }
