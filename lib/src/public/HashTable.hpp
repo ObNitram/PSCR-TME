@@ -50,6 +50,7 @@ template <typename K, typename V> class HashTable
 
         return *this;
     }
+
     HashTable &operator=(HashTable &&other) noexcept
     {
         if (&other == this) return *this;
