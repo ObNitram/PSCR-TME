@@ -41,11 +41,12 @@ String &String::operator=(String &&other) noexcept
 {
     assert(other.str != nullptr);
     if (&other == this) return *this;
-    delete[] str;
-    str = other.str;
-    other.str = nullptr;
+
+    std::swap(str, other.str);
+
     return *this;
 }
+
 String::~String() { delete[] str; }
 
 std::ostream &operator<<(std::ostream &os, const String &obj) { return os << (obj.str ? obj.str : "null"); }
