@@ -1,7 +1,7 @@
 #pragma once
-#include <utility>
 #include <cassert>
 #include <cstddef>
+#include <utility>
 
 namespace pscr
 {
@@ -15,6 +15,7 @@ template <typename T> class List
     };
 
     Node *head = nullptr;
+    Node *tail = nullptr;
     size_t _size = 0;
 
   public:
@@ -22,19 +23,15 @@ template <typename T> class List
 
     List(const List &other)
     {
-        Node *current = other.head;
-        while (current != nullptr)
+        Node *other_itr = other.head;
+        while (other_itr != nullptr)
         {
-            push_back(current->data);
-            current = current->next;
+            push_back(other_itr->data);
+            other_itr = other_itr->next;
         }
     }
 
-    List(List &&other) noexcept : head(other.head), _size(other._size)
-    {
-        other.head = nullptr;
-        other._size = 0;
-    }
+    List(List &&other) noexcept : head(other.head), tail(other.tail), _size(other._size) { other.head = nullptr; }
 
     List &operator=(const List &other)
     {
@@ -46,6 +43,7 @@ template <typename T> class List
             delete head;
             head = next;
         }
+        tail = nullptr;
 
         Node *current = other.head;
         while (current != nullptr)
@@ -61,8 +59,9 @@ template <typename T> class List
     {
         if (&other == this) return *this;
 
-        _size = other._size;
         std::swap(head, other.head);
+        std::swap(tail, other.tail);
+        std::swap(_size, other._size);
 
         return *this;
     }
@@ -81,19 +80,26 @@ template <typename T> class List
     {
         assert(index < _size);
         Node *current = head;
-        for (size_t i = 0; i < index; i++) { current = current->next; }
+        for (size_t i = 0; i < index; i++)
+        {
+            current = current->next;
+        }
         return current->data;
     }
 
     void push_back(const T &val)
     {
         Node *newNode = new Node{val, nullptr};
-        if (head == nullptr) { head = newNode; }
+        if (head == nullptr)
+        {
+            assert(tail == nullptr);
+            head = newNode;
+            tail = newNode;
+        }
         else
         {
-            Node *current = head;
-            while (current->next != nullptr) { current = current->next; }
-            current->next = newNode;
+            tail->next = newNode;
+            tail = newNode;
         }
         _size++;
     }

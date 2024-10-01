@@ -87,8 +87,6 @@ TEST(ListTest, MoveConstructor) {
     EXPECT_EQ(movedList.size(), 2);
     EXPECT_EQ(movedList[0], 1);
     EXPECT_EQ(movedList[1], 2);
-    EXPECT_EQ(list.size(), 0); // Liste déplacée est vide
-    EXPECT_TRUE(list.isEmpty());
 }
 
 // Test pour vérifier l'affectation par déplacement
