@@ -36,7 +36,7 @@ TEST(VectorTest, IndexOperator)
     Vector<int> v(3);
     v.push_back(10);
     v[0] = 20;
-    EXPECT_EQ(v[0], 20);// Puisqu'il n'y a pas de valeurs assignées
+    EXPECT_EQ(v[0], 20); // Puisqu'il n'y a pas de valeurs assignées
 }
 
 // Test pour vérifier que l'accès constant par l'opérateur d'indexation fonctionne
@@ -100,3 +100,106 @@ TEST(VectorTest, EnsureCapacity)
     EXPECT_EQ(v[4], 3);
 }
 
+// Tests pour vérifier les itérateurs
+TEST(VectorTest, IteratorBeginEnd)
+{
+    auto v = Vector<int>(3);
+    v[0] = 1;
+    v[1] = 2;
+    v[2] = 3;
+
+    auto it = v.begin();
+    EXPECT_EQ(*it, 1); // Vérifie que l'itérateur commence au début
+
+    ++it;
+    EXPECT_EQ(*it, 2); // Vérifie que l'itérateur avance correctement
+
+    ++it;
+    EXPECT_EQ(*it, 3); // Vérifie qu'on atteint le dernier élément
+
+    ++it;
+    EXPECT_EQ(it, v.end()); // Vérifie que l'itérateur atteint la fin
+}
+
+TEST(VectorTest, ConstIterator)
+{
+    auto v = Vector<int>(3);
+    v[0] = 1;
+    v[1] = 2;
+    v[2] = 3;
+
+    const Vector<int> &const_v = v;
+    auto it = const_v.begin();
+    EXPECT_EQ(*it, 1);
+
+    ++it;
+    EXPECT_EQ(*it, 2);
+
+    ++it;
+    EXPECT_EQ(*it, 3);
+}
+
+TEST(VectorTest, ForEachLoop)
+{
+    auto v = Vector<int>(3);
+    v[0] = 10;
+    v[1] = 20;
+    v[2] = 30;
+
+    constexpr  int expected_values[] = {10, 20, 30};
+    int index = 0;
+    for (int& value : v)
+    {
+        EXPECT_EQ(value, expected_values[index++]);
+    }
+}
+
+TEST(VectorTest, ForEachLoopConst)
+{
+    auto v = Vector<int>(3);
+    v[0] = 10;
+    v[1] = 20;
+    v[2] = 30;
+
+    constexpr int expected_values[] = {10, 20, 30};
+    int index = 0;
+    for (const auto& value : v)
+    {
+        EXPECT_EQ(value, expected_values[index++]);
+    }
+}
+
+TEST(VectorTest, IteratorComparison)
+{
+    Vector<int> v;
+    v.push_back(1);
+    v.push_back(2);
+    v.push_back(3);
+
+    auto it1 = v.begin();
+    auto it2 = v.begin();
+    EXPECT_EQ(it1, it2); // Les itérateurs devraient être égaux au début
+
+    ++it2;
+    EXPECT_NE(it1, it2); // Après incrémentation, ils devraient être différents
+}
+
+TEST(VectorTest, IteratorManualLoop)
+{
+    auto v = Vector<int>(3);
+    v[0] = 5;
+    v[1] = 10;
+    v[2] = 15;
+
+    auto it = v.begin();
+    EXPECT_EQ(*it, 5);
+
+    ++it;
+    EXPECT_EQ(*it, 10);
+
+    ++it;
+    EXPECT_EQ(*it, 15);
+
+    ++it;
+    EXPECT_EQ(it, v.end()); // Vérifie qu'on atteint la fin
+}

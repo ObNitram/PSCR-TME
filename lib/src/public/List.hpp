@@ -87,6 +87,50 @@ template <typename T> class List
         return current->data;
     }
 
+    class iterator
+    {
+        Node *current;
+
+      public:
+        explicit iterator(Node *current) : current(current) {}
+
+        iterator &operator++()
+        {
+            current = current->next;
+            return *this;
+        }
+
+        bool operator!=(const iterator &other) const { return current != other.current; }
+        bool operator==(const iterator &other) const { return current == other.current; }
+
+        T &operator*() { return current->data; }
+    };
+
+    class const_iterator
+    {
+        Node *current;
+
+      public:
+        explicit const_iterator(Node *current) : current(current) {}
+
+        const_iterator operator++()
+        {
+            current = current->next;
+            return *this;
+        }
+
+        bool operator!=(const const_iterator &other) const { return current != other.current; }
+        bool operator==(const const_iterator &other) const { return current == other.current; }
+
+        T &operator*() const { return current->data; }
+    };
+
+    iterator begin() { return iterator(head); }
+    iterator end() { return iterator(nullptr); }
+
+    const_iterator begin() const { return const_iterator(head); }
+    const_iterator end() const { return const_iterator(nullptr); }
+
     void push_back(const T &val)
     {
         Node *newNode = new Node{val, nullptr};

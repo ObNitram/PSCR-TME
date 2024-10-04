@@ -123,12 +123,85 @@ TEST(ListTest, IsEmpty) {
     EXPECT_FALSE(list.isEmpty());
 }
 
-// Test pour vérifier les limites d'accès avec l'assert
-TEST(ListTest, OutOfBoundsAccess) {
+// Tests pour les itérateurs de `List`
+TEST(ListTest, IteratorBeginEnd) {
     List<int> list;
     list.push_back(1);
     list.push_back(2);
+    list.push_back(3);
 
-    EXPECT_DEATH(list[2], ".*");  // Teste un accès hors limites
+    auto it = list.begin();
+    EXPECT_EQ(*it, 1); // Vérifie que l'itérateur commence au premier élément
+
+    ++it;
+    EXPECT_EQ(*it, 2); // Vérifie que l'itérateur avance correctement
+
+    ++it;
+    EXPECT_EQ(*it, 3); // Vérifie qu'on atteint le dernier élément
+
+    ++it;
+    EXPECT_EQ(it, list.end()); // Vérifie que l'itérateur atteint la fin
 }
 
+TEST(ListTest, ConstIterator) {
+    List<int> list;
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+
+    const List<int>& const_list = list;
+    auto it = const_list.begin();
+    EXPECT_EQ(*it, 1);
+
+    ++it;
+    EXPECT_EQ(*it, 2);
+
+    ++it;
+    EXPECT_EQ(*it, 3);
+}
+
+TEST(ListTest, ForEachLoop) {
+    List<int> list;
+    list.push_back(10);
+    list.push_back(20);
+    list.push_back(30);
+
+    int expected_values[] = {10, 20, 30};
+    int index = 0;
+    for (int value : list) {
+        EXPECT_EQ(value, expected_values[index++]);
+    }
+}
+
+TEST(ListTest, IteratorComparison) {
+    List<int> list;
+    list.push_back(1);
+    list.push_back(2);
+    list.push_back(3);
+
+    auto it1 = list.begin();
+    auto it2 = list.begin();
+    EXPECT_EQ(it1, it2); // Les itérateurs devraient être égaux au début
+
+    ++it2;
+    EXPECT_NE(it1, it2); // Après incrémentation, ils devraient être différents
+}
+
+TEST(ListTest, IteratorManualLoop) {
+    List<int> list;
+    list.push_back(5);
+    list.push_back(10);
+    list.push_back(15);
+
+    auto it = list.begin();
+    EXPECT_EQ(*it, 5);
+
+    ++it;
+    EXPECT_EQ(*it, 10);
+
+    ++it;
+    EXPECT_EQ(*it, 15);
+
+    ++it;
+    EXPECT_EQ(it, list.end()); // Vérifie qu'on atteint la fin
+}

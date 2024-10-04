@@ -131,6 +131,101 @@ TEST(HashTableTest, GrowTest)
         table.put(i, "value" + std::to_string(i));
         EXPECT_EQ(table.size(), i + 1);
         EXPECT_EQ(*table.get(i), "value" + std::to_string(i));
-        EXPECT_EQ(table.get(i+1), nullptr);
+        EXPECT_EQ(table.get(i + 1), nullptr);
     }
+}
+// Tests pour les itérateurs de `HashTable`
+TEST(HashTableTest, IteratorBeginEnd)
+{
+    HashTable<int, std::string> table;
+    table.put(1, "one");
+    table.put(2, "two");
+    table.put(3, "three");
+
+    auto it = table.begin();
+    EXPECT_EQ((*it).first, 1);
+    EXPECT_EQ((*it).second, "one");
+
+    ++it;
+    EXPECT_EQ((*it).first, 2);
+    EXPECT_EQ((*it).second, "two");
+
+    ++it;
+    EXPECT_EQ((*it).first, 3);
+    EXPECT_EQ((*it).second, "three");
+
+    ++it;
+    EXPECT_EQ(it, table.end()); // Vérifie que l'itérateur atteint la fin
+}
+
+TEST(HashTableTest, ConstIterator)
+{
+    HashTable<int, std::string> table;
+    table.put(1, "one");
+    table.put(2, "two");
+    table.put(3, "three");
+
+    const HashTable<int, std::string> &const_table = table;
+    auto it = const_table.begin();
+    EXPECT_EQ((*it).first, 1);
+    EXPECT_EQ((*it).second, "one");
+
+    ++it;
+    EXPECT_EQ((*it).first, 2);
+    EXPECT_EQ((*it).second, "two");
+
+    ++it;
+    EXPECT_EQ((*it).first, 3);
+    EXPECT_EQ((*it).second, "three");
+}
+
+TEST(HashTableTest, ForEachLoop)
+{
+    HashTable<int, std::string> table;
+    table.put(1, "one");
+    table.put(2, "two");
+    table.put(3, "three");
+
+    std::unordered_map<int, std::string> expected_values = {{1, "one"}, {2, "two"}, {3, "three"}};
+    for (const auto &[key, value] : table)
+    {
+        EXPECT_EQ(expected_values[key], value);
+    }
+}
+
+TEST(HashTableTest, IteratorComparison)
+{
+    HashTable<int, std::string> table;
+    table.put(1, "one");
+    table.put(2, "two");
+
+    auto it1 = table.begin();
+    auto it2 = table.begin();
+    EXPECT_EQ(it1, it2); // Les itérateurs devraient être égaux au début
+
+    ++it2;
+    EXPECT_NE(it1, it2); // Après incrémentation, ils devraient être différents
+}
+
+TEST(HashTableTest, IteratorManualLoop)
+{
+    HashTable<int, std::string> table;
+    table.put(1, "one");
+    table.put(2, "two");
+    table.put(3, "three");
+
+    auto it = table.begin();
+    EXPECT_EQ((*it).first, 1);
+    EXPECT_EQ((*it).second, "one");
+
+    ++it;
+    EXPECT_EQ((*it).first, 2);
+    EXPECT_EQ((*it).second, "two");
+
+    ++it;
+    EXPECT_EQ((*it).first, 3);
+    EXPECT_EQ((*it).second, "three");
+
+    ++it;
+    EXPECT_EQ(it, table.end()); // Vérifie qu'on atteint la fin
 }

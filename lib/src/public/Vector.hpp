@@ -28,22 +28,27 @@ template <typename T> class Vector
         _size = other._size;
         _capacity = other._capacity;
         _data = new T[_capacity];
-        for (size_t i = 0; i < _size; i++) { _data[i] = other._data[i]; }
+        for (size_t i = 0; i < _size; i++)
+        {
+            _data[i] = other._data[i];
+        }
     }
+
     Vector(Vector &&other) noexcept
     {
         _size = other._size;
         _capacity = other._capacity;
         std::swap(_data, other._data);
 
-        other._size = 0;
-        other._capacity = 0;
         other._data = nullptr;
     }
 
     Vector &operator=(const Vector &other)
     {
-        if (&other == this) { return *this; }
+        if (&other == this)
+        {
+            return *this;
+        }
 
         if (_capacity < other._capacity)
         {
@@ -53,13 +58,19 @@ template <typename T> class Vector
         }
 
         _size = other._size;
-        for (size_t i = 0; i < _size; i++) { _data[i] = other._data[i]; }
+        for (size_t i = 0; i < _size; i++)
+        {
+            _data[i] = other._data[i];
+        }
         return *this;
     }
 
     Vector &operator=(Vector &&other) noexcept
     {
-        if (&other == this) { return *this; }
+        if (&other == this)
+        {
+            return *this;
+        }
 
         std::swap(_data, other._data);
         std::swap(_size, other._size);
@@ -82,6 +93,14 @@ template <typename T> class Vector
         return _data[index];
     }
 
+    typedef T *iterator;
+    iterator begin() { return _data; }
+    iterator end() { return _data + _size; }
+
+    typedef T *const_iterator;
+    const_iterator begin() const { return _data; }
+    const_iterator end() const { return _data + _size; }
+
     void push_back(const T &val)
     {
         ensure_capacity();
@@ -95,12 +114,18 @@ template <typename T> class Vector
   private:
     void ensure_capacity()
     {
-        if (_size < _capacity) { return; }
+        if (_size < _capacity)
+        {
+            return;
+        }
 
         _capacity = _capacity * grow_factor;
         T *new_data = new T[_capacity];
 
-        for (size_t i = 0; i < _size; i++) { new_data[i] = std::move(_data[i]); }
+        for (size_t i = 0; i < _size; i++)
+        {
+            new_data[i] = std::move(_data[i]);
+        }
 
         delete[] _data;
         _data = new_data;

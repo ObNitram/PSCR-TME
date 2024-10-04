@@ -10,6 +10,7 @@ add_library(PscrLib STATIC
         src/private/List.cpp src/public/List.hpp
         src/private/String.cpp src/public/String.hpp
         src/private/Vector.cpp src/public/Vector.hpp
+        src/private/Core.cpp src/public/Core.hpp
 )
 
 # Spécifier les répertoires d'inclusion après la création de la bibliothèque
@@ -18,10 +19,9 @@ target_include_directories(PscrLib PUBLIC ${CMAKE_SOURCE_DIR}/src/public)
 include(FetchContent)
 FetchContent_Declare(
         googletest
-        URL https://github.com/google/googletest/archive/03597a01ee50ed33e9dfd640b249b4be3799d395.zip
+        URL https://github.com/google/googletest/archive/b514bdc898e2951020cbdca1304b75f5950d1f59.zip
 )
-# For Windows: Prevent overriding the parent project's compiler/linker settings
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
 FetchContent_MakeAvailable(googletest)
 
 
@@ -34,6 +34,7 @@ add_executable(PscrLibTests
         test/VectorTest.cpp
         test/ListTest.cpp
         test/HashTableTest.cpp
+        test/CoreTest.cpp
 )
 
 # Lier les tests avec Google Test et la bibliothèque PscrLib
