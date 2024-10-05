@@ -1,4 +1,7 @@
 #include "Core.hpp" // Remplacer par le chemin correct
+
+#include "Assert.hpp"
+
 #include <gtest/gtest.h>
 
 using namespace pscr;
@@ -33,5 +36,11 @@ TEST(CountIfEqualTest, AllMatchingElements) {
 TEST(CountIfEqualTest, MixedDataTypes) {
     std::vector<double> vec = {1.1, 2.2, 3.3, 2.2, 5.5};
     EXPECT_EQ(Core::count_if_equal(vec.begin(), vec.end(), 2.2), 2);
+}
+
+TEST(AssertTest, AssertTest)
+{
+    //assert_message(false, "Je suis groot");
+    //EXPECT_TRUE(false);
 }
 
