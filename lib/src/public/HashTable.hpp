@@ -115,7 +115,7 @@ template <typename K, typename V> class HashTable
             return _bucket_current == other._bucket_current && _list == other._list;
         }
 
-        bool operator!=(const iterator &other) const { return !(_bucket_current == other._bucket_current); }
+        bool operator!=(const iterator &other) const { return !(*this == other); }
 
         std::pair<K, V> operator*() { return std::pair<K, V>((*_list).key, (*_list).value); }
     };

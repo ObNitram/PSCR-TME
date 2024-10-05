@@ -170,13 +170,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="CMake Debug.PscrLib" />
+      <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.All in PscrLibTests" />
       <item itemvalue="Google Test.HashTableTest.IteratorBeginEnd" />
       <item itemvalue="Google Test.StringTest.CopyAssignment" />
       <item itemvalue="Google Test.StringTest.CopyConstructor" />
       <item itemvalue="Google Test.VectorTest" />
-      <item itemvalue="CMake Debug.PscrLib" />
-      <item itemvalue="CTest Application.All CTest" />
-      <item itemvalue="Google Test.All in PscrLibTests" />
     </list>
     <recent_temporary>
       <list>
