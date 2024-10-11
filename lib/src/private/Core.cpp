@@ -1,4 +1,4 @@
-#include "Core.hpp"
+#include "../public/Core.hpp"
 
 #include <cstring>
 

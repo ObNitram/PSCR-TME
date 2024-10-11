@@ -7,8 +7,8 @@ using namespace pscr;
 TEST(VectorTest, DefaultConstructor)
 {
     Vector<int> v;
-    EXPECT_EQ(v.size(), 10);
-    EXPECT_FALSE(v.isEmpty());
+    EXPECT_EQ(v.size(), 0);
+    EXPECT_TRUE(v.isEmpty());
 }
 
 // Test pour vérifier la création avec une taille initiale
@@ -25,9 +25,9 @@ TEST(VectorTest, PushBack)
     Vector<int> v;
     v.push_back(1);
     v.push_back(2);
-    EXPECT_EQ(v.size(), 12);
-    EXPECT_EQ(v[10], 1);
-    EXPECT_EQ(v[11], 2);
+    EXPECT_EQ(v.size(), 2);
+    EXPECT_EQ(v[0], 1);
+    EXPECT_EQ(v[1], 2);
 }
 
 // Test pour vérifier l'accès par l'opérateur d'indexation
@@ -55,7 +55,7 @@ TEST(VectorTest, CopyConstructor)
     v.push_back(42);
     Vector<int> v_copy(v);
     EXPECT_EQ(v_copy.size(), v.size());
-    EXPECT_EQ(v_copy[10], 42);
+    EXPECT_EQ(v_copy[0], 42);
 }
 
 // Test pour vérifier l'opérateur de copie
@@ -66,7 +66,7 @@ TEST(VectorTest, CopyAssignment)
     Vector<int> v_copy;
     v_copy = v;
     EXPECT_EQ(v_copy.size(), v.size());
-    EXPECT_EQ(v_copy[10], 100);
+    EXPECT_EQ(v_copy[0], 100);
 }
 
 // Test pour vérifier le constructeur par déplacement
@@ -75,7 +75,7 @@ TEST(VectorTest, MoveConstructor)
     Vector<int> v;
     v.push_back(50);
     Vector<int> v_moved(std::move(v));
-    EXPECT_EQ(v_moved.size(), 11);
+    EXPECT_EQ(v_moved.size(), 1);
 }
 
 // Test pour vérifier l'opérateur de déplacement
@@ -85,8 +85,8 @@ TEST(VectorTest, MoveAssignment)
     v.push_back(60);
     Vector<int> v_moved;
     v_moved = std::move(v);
-    EXPECT_EQ(v_moved.size(), 11);
-    EXPECT_EQ(v_moved[10], 60);
+    EXPECT_EQ(v_moved.size(), 1);
+    EXPECT_EQ(v_moved[0], 60);
 }
 
 // Test pour vérifier l'augmentation de capacité

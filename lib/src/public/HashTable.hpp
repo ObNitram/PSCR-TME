@@ -9,7 +9,8 @@
 
 namespace pscr
 {
-template <typename K, typename V> class HashTable
+template <typename K, typename V>
+class HashTable
 {
     static constexpr size_t default_buckets_size = 100;
     static constexpr size_t grow_factor = 2;
@@ -115,7 +116,10 @@ template <typename K, typename V> class HashTable
             return _bucket_current == other._bucket_current && _list == other._list;
         }
 
-        bool operator!=(const iterator &other) const { return !(*this == other); }
+        bool operator!=(const iterator &other) const
+        {
+            return !(*this == other);
+        }
 
         std::pair<K, V> operator*() { return std::pair<K, V>((*_list).key, (*_list).value); }
     };

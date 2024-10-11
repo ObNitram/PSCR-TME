@@ -1,4 +1,4 @@
-#include "Vector.hpp"
+#include "../public/Vector.hpp"
 
 namespace pscr
 {

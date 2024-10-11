@@ -1,13 +1,17 @@
 #pragma once
 #include <cassert>
+#include <concepts>
 #include <cstddef>
 #include <utility>
 
 namespace pscr
 {
-template <typename T> class Vector
+template <typename T>
+    requires std::copyable<T> && std::move_constructible<T>
+class Vector
 {
-    static constexpr size_t default_size = 10;
+    static constexpr size_t default_size = 0;
+    static constexpr size_t min_capacity = 8;
     static constexpr size_t grow_factor = 2;
 
     size_t _size;
@@ -15,31 +19,26 @@ template <typename T> class Vector
     T *_data;
 
   public:
-    Vector(const size_t size = default_size)
+    Vector(const size_t size = default_size) : _size(size), _capacity(size)
     {
-        assert(size > 0);
-        _size = size;
-        _capacity = size;
-        _data = new T[size];
+        if (_size < min_capacity)
+        {
+            _capacity = min_capacity;
+        }
+        _data = new T[_capacity];
     }
 
-    Vector(const Vector &other)
+    Vector(const Vector &other) : _size(other._size), _capacity(other._capacity)
     {
-        _size = other._size;
-        _capacity = other._capacity;
-        _data = new T[_capacity];
+        _data = new T[other._capacity];
         for (size_t i = 0; i < _size; i++)
         {
             _data[i] = other._data[i];
         }
     }
 
-    Vector(Vector &&other) noexcept
+    Vector(Vector &&other) noexcept : _size(other._size), _capacity(other._capacity), _data(other._data)
     {
-        _size = other._size;
-        _capacity = other._capacity;
-        std::swap(_data, other._data);
-
         other._data = nullptr;
     }
 
@@ -97,7 +96,7 @@ template <typename T> class Vector
     iterator begin() { return _data; }
     iterator end() { return _data + _size; }
 
-    typedef T *const_iterator;
+    typedef const T *const_iterator;
     const_iterator begin() const { return _data; }
     const_iterator end() const { return _data + _size; }
 
