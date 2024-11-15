@@ -254,11 +254,11 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="CMake Application.tme7" />
+      <item itemvalue="CMake Debug.TME2" />
       <item itemvalue="Google Test.All in PscrLibTests" />
       <item itemvalue="Google Test.HashTableTest.IteratorBeginEnd" />
       <item itemvalue="Google Test.VectorTest" />
-      <item itemvalue="CMake Debug.TME2" />
-      <item itemvalue="CMake Application.tme7" />
       <item itemvalue="Makefile Target.Makefile" />
     </list>
     <recent_temporary>
