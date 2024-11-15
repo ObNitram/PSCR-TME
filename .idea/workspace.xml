@@ -3,6 +3,14 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="RiderCppLiveTemplatesSettings" type="string" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+  </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
 }</component>
@@ -14,29 +22,53 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="tme5" targetName="gtest_main" />
-      <config projectName="tme5" targetName="PscrLib" />
-      <config projectName="tme5" targetName="gtest" />
-      <config projectName="tme5" targetName="gmock_main" />
-      <config projectName="tme5" targetName="gmock" />
-      <config projectName="tme5" targetName="tme5" />
+      <config projectName="tme7" targetName="gmock" />
+      <config projectName="tme7" targetName="gtest_main" />
+      <config projectName="tme7" targetName="PscrLib" />
+      <config projectName="tme7" targetName="gtest" />
+      <config projectName="tme7" targetName="gmock_main" />
+      <config projectName="tme7" targetName="tme7" />
     </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
-      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" GENERATION_OPTIONS="-G &quot;Unix Makefiles&quot;" />
       <configuration PROFILE_NAME="RelWithDebInfo" ENABLED="true" CONFIG_NAME="RelWithDebInfo" />
       <configuration PROFILE_NAME="MinSizeRel" ENABLED="true" CONFIG_NAME="MinSizeRel" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TME5/src/lib/public/Utils.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TME7/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TME7/src/pipe.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/.cproject" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/configure.ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Color.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/lib/private/Color.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Color.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Job.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Makefile.am" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Pool.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Queue.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Rayon.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Scene.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Sphere.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Vec3D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/lib/private/Vec3D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/Vec3D.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/tme4.sln" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/tme4.vcxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/tme4.vcxproj.filters" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/tme4.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME7/src/prod_cons.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/prod_cons.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +78,7 @@
   <component name="ClangdSettings">
     <option name="clangTidyViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -57,18 +89,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ObNitram&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ObNitram/PSCR-TME.git&quot;,
+    &quot;accountId&quot;: &quot;5867720d-aa23-47e5-afa2-8c23349151a3&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME1/MyString/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME2/tme2/main.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TME5/src/Pool.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Job.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Pool.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Queue.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Vec3D.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME7/src/pipe.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/private/String.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/List.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/String.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/public/Vector.hpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -93,6 +138,8 @@
     &quot;CMake Application.PscrLib.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.Tpe2.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.tme4.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme5.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme7.executor&quot;: &quot;Run&quot;,
     &quot;CMake Debug.MyString.executor&quot;: &quot;Debug&quot;,
     &quot;CMake Debug.PscrLib.executor&quot;: &quot;Debug&quot;,
     &quot;CMake Debug.TME2.executor&quot;: &quot;Debug&quot;,
@@ -117,52 +164,37 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/obnitram/Projects/cours/pscr/PSCR-TME/TME4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/obnitram/Projects/cours/pscr/PSCR-TME/TME7&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TME7" />
       <recent name="$PROJECT_DIR$/TME4" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TME7/src" />
+      <recent name="$PROJECT_DIR$/TME5/src/lib/private" />
+      <recent name="$PROJECT_DIR$/TME5/src/lib/public" />
       <recent name="$PROJECT_DIR$/TME5" />
       <recent name="$PROJECT_DIR$/lib/src/public" />
-      <recent name="$PROJECT_DIR$/lib/src/private" />
-      <recent name="$PROJECT_DIR$/lib/src" />
-      <recent name="$PROJECT_DIR$/lib/public" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Debug.TME2">
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
+  <component name="RunManager" selected="CMake Application.tme7">
+    <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme7" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme7" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VectorTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_PATTERN="VectorTest.*:VectorTest/*.*:VectorTest.*/*:*/VectorTest.*/*:*/VectorTest/*.*" TEST_MODE="PATTERN">
+    <configuration name="VectorTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme7" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme7" RUN_TARGET_NAME="PscrLibTests" TEST_PATTERN="VectorTest.*:VectorTest/*.*:VectorTest.*/*:*/VectorTest.*/*:*/VectorTest/*.*" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -171,7 +203,7 @@
     <configuration name="TME2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
-    <configuration name="tme5" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="tme5" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="tme5">
+    <configuration name="tme7" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/bin/cat LICENSE | /bin/wc -l" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme7" TARGET_NAME="tme7" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme7" RUN_TARGET_NAME="tme7">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -212,12 +244,21 @@
       </makefile>
       <method v="2" />
     </configuration>
+    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file />
+        <command-line-args />
+        <work-dir />
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="CMake Application.tme5" />
-      <item itemvalue="CMake Debug.TME2" />
       <item itemvalue="Google Test.All in PscrLibTests" />
       <item itemvalue="Google Test.HashTableTest.IteratorBeginEnd" />
       <item itemvalue="Google Test.VectorTest" />
+      <item itemvalue="CMake Debug.TME2" />
+      <item itemvalue="CMake Application.tme7" />
       <item itemvalue="Makefile Target.Makefile" />
     </list>
     <recent_temporary>
@@ -264,6 +305,17 @@
       <workItem from="1728627461585" duration="6278000" />
       <workItem from="1728648112623" duration="6665000" />
       <workItem from="1728752362410" duration="4000" />
+      <workItem from="1729360273679" duration="716000" />
+      <workItem from="1729501564856" duration="457000" />
+      <workItem from="1729504059645" duration="2967000" />
+      <workItem from="1729511725156" duration="4148000" />
+      <workItem from="1730294238069" duration="33000" />
+      <workItem from="1730661661010" duration="892000" />
+      <workItem from="1731080247544" duration="12000" />
+      <workItem from="1731184931757" duration="2000" />
+      <workItem from="1731675863528" duration="666000" />
+      <workItem from="1731677826166" duration="4738000" />
+      <workItem from="1731695496777" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />

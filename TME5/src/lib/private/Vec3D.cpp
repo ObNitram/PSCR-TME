@@ -5,7 +5,9 @@
  *      Author: ythierry
  */
 
-#include "Vec3D.h"
+
+#include "Vec3D.hpp"
+
 #include <cmath>
 
 namespace pr {
