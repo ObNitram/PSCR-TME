@@ -40,34 +40,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/TME5/src/lib/public/Utils.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TME7/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TME7/src/pipe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/.cproject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/Makefile.am" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/configure.ac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Color.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/lib/private/Color.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Color.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Job.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Makefile.am" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Pool.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Queue.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Rayon.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Scene.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Sphere.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Vec3D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/lib/private/Vec3D.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/Vec3D.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/tme4.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/tme4.vcxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/tme4.vcxproj.filters" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/tme4.vcxproj.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME7/src/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/Stack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TME7/src/prod_cons.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/prod_cons.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,6 +84,8 @@
     <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Vec3D.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME7/src/pipe.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/obnitram/Projects/cours/pscr/PSCR-TME/TME7/src/pipe.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME7/src/prod_cons.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/private/String.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/List.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/String.hpp" root0="FORCE_HIGHLIGHTING" />
@@ -202,6 +178,11 @@
     </configuration>
     <configuration name="TME2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
     </configuration>
     <configuration name="tme7" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/bin/cat LICENSE | /bin/wc -l" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme7" TARGET_NAME="tme7" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme7" RUN_TARGET_NAME="tme7">
       <method v="2">
@@ -315,7 +296,10 @@
       <workItem from="1731184931757" duration="2000" />
       <workItem from="1731675863528" duration="666000" />
       <workItem from="1731677826166" duration="4738000" />
-      <workItem from="1731695496777" duration="8000" />
+      <workItem from="1731695496777" duration="1640000" />
+      <workItem from="1731915732234" duration="55000" />
+      <workItem from="1732009914770" duration="2569000" />
+      <workItem from="1732015057020" duration="865000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />
@@ -453,7 +437,23 @@
       <option name="project" value="LOCAL" />
       <updated>1728633735734</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="# add remove upgrade fix format refactor change&#10;&#10;tme5&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1731695523766</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731695523766</updated>
+    </task>
+    <task id="LOCAL-00019" summary="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1731695539128</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731695539129</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +495,9 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add assert in PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;fix HashTable iterator&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;refactor Vector&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;refactor Vector&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
