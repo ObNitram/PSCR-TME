@@ -7,7 +7,6 @@
 namespace pr
 {
 
-// MT safe version of the Queue, non blocking.
 template <typename T> class Queue
 {
     T **tab;

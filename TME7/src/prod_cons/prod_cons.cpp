@@ -1,20 +1,36 @@
-#include "Stack.h"
 #include <cstring>
 #include <fcntl.h>
 #include <iostream>
 #include <sys/mman.h>
 #include <unistd.h>
 
-void producteur(pr::Stack<char> *stack)
+#include "Stack.h"
+
+void producer(pr::Stack<char> *stack)
 {
-    char c;
-    while (std::cin.get(c))
+    std::string input;
+
+    std::cout << "Enter a string (or 'stop' to quit): \n";
+    while (true)
     {
-        stack->push(c);
+
+        std::getline(std::cin, input);
+
+        if (input == "stop")
+        {
+            std::cout << "Stop command received. Exiting producer.\n";
+            break;
+        }
+
+        for (const char c : input)
+        {
+            stack->push(c);
+        }
+        stack->push('\n');
     }
 }
 
-void consomateur(pr::Stack<char> *stack)
+void consumer(pr::Stack<char> *stack)
 {
     for (;;)
     {
@@ -79,11 +95,11 @@ int main(const int argc, char *argv[])
 
     if (is_producer)
     {
-        producteur(stack);
+        producer(stack);
     }
     else
     {
-        consomateur(stack);
+        consumer(stack);
     }
 
     // Only the producer clean

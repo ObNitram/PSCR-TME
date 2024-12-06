@@ -12,6 +12,7 @@ add_library(PscrLib STATIC
         src/private/Vector.cpp src/public/Vector.hpp
         src/private/Core.cpp src/public/Core.hpp
         src/public/Assert.hpp
+        src/private/Stack.cpp src/public/Stack.hpp
 )
 
 # Spécifier les répertoires d'inclusion après la création de la bibliothèque

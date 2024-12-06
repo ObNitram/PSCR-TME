@@ -1,7 +1,7 @@
 #pragma once
 
-#include <cstring>     // size_t, memset
-#include <semaphore.h> // sem_t
+#include <cstring>
+#include <semaphore.h>
 
 namespace pr
 {
@@ -12,23 +12,20 @@ template <typename T> class Stack
 {
     T tab[STACKSIZE];
     size_t sz;
-    sem_t sem_empty{}; // Pour contrôler les éléments disponibles
-    sem_t sem_full{};  // Pour contrôler l'espace disponible
+    sem_t sem_empty{};
+    sem_t sem_full{};
 
   public:
-    // Constructeur
     Stack() : sz(0)
     {
         memset(tab, 0, sizeof(tab));
-        // Initialiser les sémaphores
-        sem_init(&sem_empty, 1, 0);        // Commence à 0 (aucun élément disponible)
-        sem_init(&sem_full, 1, STACKSIZE); // Commence à STACKSIZE (plein d'espace libre)
+
+        sem_init(&sem_empty, 1, 0);
+        sem_init(&sem_full, 1, STACKSIZE);
     }
 
-    // Destructeur
     ~Stack()
     {
-        // Détruire les sémaphores
         sem_destroy(&sem_empty);
         sem_destroy(&sem_full);
     }
@@ -39,12 +36,12 @@ template <typename T> class Stack
         sem_wait(&sem_empty);
 
         // Accéder en toute sécurité à la pile
-        T toret = tab[--sz];
+        T value = tab[--sz];
 
         // Signaler qu'un espace est disponible
         sem_post(&sem_full);
 
-        return toret;
+        return value;
     }
 
     void push(T elt)

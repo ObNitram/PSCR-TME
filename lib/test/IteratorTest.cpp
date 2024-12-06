@@ -1,5 +1,3 @@
-#pragma once
-
 #include "HashTable.hpp"
 
 #include <algorithm>

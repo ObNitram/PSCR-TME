@@ -41,8 +41,8 @@ int main(int argc, char **argv)
         return 1;
     }
 
-    print_tab2(cmd1);
-    print_tab2(cmd2);
+    // print_tab2(cmd1);
+    // print_tab2(cmd2);
 
     int fds[2];
     if (pipe(fds))
