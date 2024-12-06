@@ -41,17 +41,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/orale.md" afterDir="false" />
+    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/lib/public/Queue.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/lib/public/Queue.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME7/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME7/src/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/prod_cons/Stack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME7/src/chat_common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME7/src/pipe.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/pipe/pipe.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME7/src/prod_cons.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/prod_cons/prod_cons.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/lib/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/test/IteratorTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/lib/test/IteratorTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME7/src/prod_cons/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/TME7/src/prod_cons/Stack.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +312,7 @@
       <workItem from="1733474460069" duration="1005000" />
       <workItem from="1733475472979" duration="591000" />
       <workItem from="1733476100633" duration="1650000" />
-      <workItem from="1733489008935" duration="4000" />
+      <workItem from="1733489008935" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />
@@ -482,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732015956298</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733489035438</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733489035438</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,10 +525,10 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;fix HashTable iterator&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;refactor Vector&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5&#10;&#10;#[PR: #XX]" />
-    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme7 : Semaphore, Memoire partagee&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
