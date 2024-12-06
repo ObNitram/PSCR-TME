@@ -7,18 +7,18 @@
 
 #include <algorithm>
 #include <fstream>
+#include <iomanip>
 #include <iostream>
 #include <random>
 
-void fillScene(pr::Scene &scene, std::default_random_engine &re)
+void fillScene(pr::Scene &scene, std::default_random_engine &re, int nb_de_sphere)
 {
     // Nombre de spheres (rend le probleme plus dur)
-    constexpr int NBSPHERES = 2500;
 
     // on remplit la scene de spheres colorees de taille position et couleur aleatoire
     std::uniform_int_distribution<int> distrib(0, 200);
     std::uniform_real_distribution<double> distribd(-200, 200);
-    for (int i = 0; i < NBSPHERES; i++)
+    for (int i = 0; i < nb_de_sphere; i++)
     {
         // position autour de l'angle de la camera
         // rayon entre 3 et 33, couleur aleatoire
@@ -55,32 +55,11 @@ void exportImage(const char *path, size_t width, size_t height, pr::Color *pixel
     img.close();
 }
 
-// NB : en francais pour le cours, preferez coder en english toujours.
-// pas d'accents pour eviter les soucis d'encodage
-
-int main_base()
+int compute_raw(pr::Scene &scene, std::vector<pr::Vec3D> &lights, pr::Color *pixels)
 {
-    std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
-    // on pose une graine basee sur la date
-    std::default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
-    // definir la Scene : resolution de l'image
-    pr::Scene scene(1000, 1000);
-    // remplir avec un peu d'aléatoire
-    fillScene(scene, re);
-
-    // lumieres
-    std::vector<pr::Vec3D> lights;
-    lights.reserve(3);
-    lights.emplace_back(50, 50, -50);
-    lights.emplace_back(50, 50, 120);
-    lights.emplace_back(200, 0, 120);
-
     // les points de l'ecran, en coordonnées 3D, au sein de la Scene.
     // on tire un rayon de l'observateur vers chacun de ces points
     const pr::Scene::screen_t &screen = scene.getScreenPoints();
-
-    // Les couleurs des pixels dans l'image finale
-    auto *pixels = new pr::Color[scene.getWidth() * scene.getHeight()];
 
     // pour chaque pixel, calculer sa couleur
     for (int x = 0; x < scene.getWidth(); x++)
@@ -112,43 +91,19 @@ int main_base()
         }
     }
 
-    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    std::cout << "Total time " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "ms.\n";
-
-    exportImage("toto.ppm", scene.getWidth(), scene.getHeight(), pixels);
-
-    delete[] pixels;
-
     return 0;
 }
 
-int main(int argc, char *argv[])
+int compute_with_pixel_jobs(pr::Scene &scene, std::vector<pr::Vec3D> &lights, pr::Color *pixels, int pool_size,
+                            int nb_thread)
 {
-    std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
-    // on pose une graine basee sur la date
-    std::default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
-    // definir la Scene : resolution de l'image
-    pr::Scene scene(1000, 1000);
-    // remplir avec un peu d'aléatoire
-    fillScene(scene, re);
-
-    // lumieres
-    std::vector<pr::Vec3D> lights;
-    lights.reserve(3);
-    lights.emplace_back(50, 50, -50);
-    lights.emplace_back(50, 50, 120);
-    lights.emplace_back(200, 0, 120);
-
     // les points de l'ecran, en coordonnées 3D, au sein de la Scene.
     // on tire un rayon de l'observateur vers chacun de ces points
     const pr::Scene::screen_t &screen = scene.getScreenPoints();
 
-    // Les couleurs des pixels dans l'image finale
-    auto *pixels = new pr::Color[scene.getWidth() * scene.getHeight()];
+    pr::Pool pool = pr::Pool(pool_size);
 
-    pr::Pool pool = pr::Pool(1000);
-
-    pool.start(40);
+    pool.start(nb_thread);
 
     // pour chaque pixel, calculer sa couleur
     for (int x = 0; x < scene.getWidth(); x++)
@@ -163,14 +118,98 @@ int main(int argc, char *argv[])
 
     pool.stop();
 
-    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    std::cout << "Total time " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count() << "ms.\n";
-
-    exportImage("toto.ppm", scene.getWidth(), scene.getHeight(), pixels);
-
-    delete[] pixels;
-
     return 0;
 }
 
+int main(int argc, char *argv[])
+{
+    // exportImage("toto.ppm", scene.getWidth(), scene.getHeight(), pixels);
 
+    pr::Scene scene(1000, 1000);
+    std::default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
+    fillScene(scene, re, 1000);
+
+    std::vector<pr::Vec3D> lights;
+    lights.reserve(3);
+    lights.emplace_back(50, 50, -50);
+    lights.emplace_back(50, 50, 120);
+    lights.emplace_back(200, 0, 120);
+
+    auto *pixels = new pr::Color[scene.getWidth() * scene.getHeight()];
+
+    std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+    compute_raw(scene, lights, pixels);
+    std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+    std::cout << "Time for compute_raw : " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()
+              << "ms.\n";
+
+    std::vector<int> poolSizes = {100, 1000, 2000, 5000}; // Valeurs pour les tailles de pool
+    std::vector<int> threadCounts = {1, 2, 4, 8, 12, 16, 20, 24, 60};
+
+    std::cout << std::setw(15) << std::left << "Pool Size" << std::setw(15) << std::left << "Nb Threads"
+              << std::setw(20) << std::left << "Execution Time (ms)"
+              << "\n";
+    std::cout << std::string(50, '-') << "\n";
+
+    for (int pool : poolSizes)
+    {
+        for (int nb_thread : threadCounts)
+        {
+            start = std::chrono::steady_clock::now();
+
+            // Appel de la fonction à mesurer
+            compute_with_pixel_jobs(scene, lights, pixels, pool, nb_thread);
+
+            end = std::chrono::steady_clock::now();
+            auto execTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+            // Affichage dans un tableau
+            std::cout << std::setw(15) << std::left << pool << std::setw(15) << std::left << nb_thread << std::setw(20)
+                      << std::left << execTime << "\n";
+        }
+    }
+
+    delete[] pixels;
+}
+
+/*
+Time for compute_raw : 4648ms.
+Pool Size      Nb Threads     Execution Time (ms)
+--------------------------------------------------
+100            1              7611
+100            2              4587
+100            4              3019
+100            8              2105
+100            12             2059
+100            16             1651
+100            20             1781
+100            24             3047
+100            60             9342
+1000           1              6180
+1000           2              3791
+1000           4              2687
+1000           8              1908
+1000           12             1678
+1000           16             1586
+1000           20             1597
+1000           24             2292
+1000           60             8424
+2000           1              6378
+2000           2              3891
+2000           4              2708
+2000           8              1989
+2000           12             1807
+2000           16             1591
+2000           20             1511
+2000           24             1856
+2000           60             7365
+5000           1              6540
+5000           2              3798
+5000           4              2674
+5000           8              2236
+5000           12             1657
+5000           16             1581
+5000           20             1430
+5000           24             1478
+5000           60             4934
+ */
