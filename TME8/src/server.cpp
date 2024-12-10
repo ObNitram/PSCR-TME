@@ -10,7 +10,7 @@ int main00()
     {
         pr::Socket sc = ss.accept();
 
-        int fd = sc.getFD();
+        const int fd = sc.getFD();
 
         int lu;
         read(fd, &lu, sizeof(int));

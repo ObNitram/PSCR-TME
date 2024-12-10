@@ -33,8 +33,7 @@ int main0()
         }
         std::cout << "envoyé =" << i << std::endl;
         int lu;
-        auto nblu = read(fd, &lu, msz);
-        if (nblu == 0)
+        if (const auto nblu = read(fd, &lu, msz); nblu == 0)
         {
             std::cout << "Fin connexion par serveur" << std::endl;
         }
@@ -48,7 +47,6 @@ int main0()
     return 0;
 }
 
-// avec une boucle, on attend un 0
 int main()
 {
 
@@ -58,11 +56,11 @@ int main()
 
     if (sock.isOpen())
     {
-        int fd = sock.getFD();
+        const int fd = sock.getFD();
 
-        ssize_t msz = sizeof(int);
         for (int i = 10; i >= 0; i--)
         {
+            constexpr ssize_t msz = sizeof(int);
             if (write(fd, &i, msz) < msz)
             {
                 perror("write");
@@ -71,13 +69,12 @@ int main()
             std::cout << "envoyé =" << i << std::endl;
 
             int lu;
-            auto nblu = read(fd, &lu, msz);
-            if (nblu == 0)
+            if (const auto nombre_lu = read(fd, &lu, msz); nombre_lu == 0)
             {
                 std::cout << "Fin connexion par serveur" << std::endl;
                 break;
             }
-            else if (nblu < msz)
+            else if (nombre_lu < msz)
             {
                 perror("read");
                 break;

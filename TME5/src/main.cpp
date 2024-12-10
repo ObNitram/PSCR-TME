@@ -101,7 +101,7 @@ int compute_with_pixel_jobs(pr::Scene &scene, std::vector<pr::Vec3D> &lights, pr
     // on tire un rayon de l'observateur vers chacun de ces points
     const pr::Scene::screen_t &screen = scene.getScreenPoints();
 
-    pr::Pool pool = pr::Pool(pool_size);
+    auto pool = pr::Pool(pool_size);
 
     pool.start(nb_thread);
 
@@ -125,17 +125,29 @@ int main(int argc, char *argv[])
 {
     // exportImage("toto.ppm", scene.getWidth(), scene.getHeight(), pixels);
 
-    pr::Scene scene(1000, 1000);
+    constexpr int nb_de_sphere = 1000;
+    constexpr int scene_size = 1000;
+    std::string csv_name = "../execution_results";
+
+    pr::Scene scene(scene_size, scene_size);
     std::default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
-    fillScene(scene, re, 1000);
+    fillScene(scene, re, nb_de_sphere);
 
     std::vector<pr::Vec3D> lights;
-    lights.reserve(3);
+    lights.reserve(6);
     lights.emplace_back(50, 50, -50);
-    lights.emplace_back(50, 50, 120);
+    lights.emplace_back(50, 50, 10);
     lights.emplace_back(200, 0, 120);
+    lights.emplace_back(5, 5, -5);
+    lights.emplace_back(57, 80, -10);
+    lights.emplace_back(20, 2, 12);
 
     auto *pixels = new pr::Color[scene.getWidth() * scene.getHeight()];
+
+    std::cout << "Test will be done with " << nb_de_sphere << " spheres and a scene of size " << scene_size << "x"
+              << scene_size << ".\n";
+    csv_name = csv_name + "_" + std::to_string(nb_de_sphere) + "sphere_" + std::to_string(scene_size) + "x" +
+               std::to_string(scene_size) + ".csv";
 
     std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
     compute_raw(scene, lights, pixels);
@@ -143,73 +155,105 @@ int main(int argc, char *argv[])
     std::cout << "Time for compute_raw : " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()
               << "ms.\n";
 
-    std::vector<int> poolSizes = {100, 1000, 2000, 5000}; // Valeurs pour les tailles de pool
-    std::vector<int> threadCounts = {1, 2, 4, 8, 12, 16, 20, 24, 60};
+    std::vector poolSizes = {10,   50,   100,  200,  400,  800,  1000, 1200, 1600,
+                             2000, 2500, 3000, 4000, 5000, 6000, 8000, 10000};
+    std::vector threadCounts = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 30, 35, 40, 50, 60};
 
+    // Afficher les résultats
     std::cout << std::setw(15) << std::left << "Pool Size" << std::setw(15) << std::left << "Nb Threads"
               << std::setw(20) << std::left << "Execution Time (ms)"
-              << "\n";
-    std::cout << std::string(50, '-') << "\n";
+              << "Progress\n";
+    std::cout << std::string(60, '-') << "\n";
+
+    // Écriture de l'en-tête du fichier CSV
+    std::ofstream file(csv_name);
+    if (!file)
+    {
+        std::cerr << "Impossible d'ouvrir le fichier pour l'écriture !" << std::endl;
+        return 1;
+    }
+    file << "Pool Size,Nb Threads,Execution Time (ms)\n";
+
+    // Créer toutes les combinaisons possibles
+    std::vector<std::pair<int, int>> combinations;
 
     for (int pool : poolSizes)
     {
         for (int nb_thread : threadCounts)
         {
-            start = std::chrono::steady_clock::now();
-
-            // Appel de la fonction à mesurer
-            compute_with_pixel_jobs(scene, lights, pixels, pool, nb_thread);
-
-            end = std::chrono::steady_clock::now();
-            auto execTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-
-            // Affichage dans un tableau
-            std::cout << std::setw(15) << std::left << pool << std::setw(15) << std::left << nb_thread << std::setw(20)
-                      << std::left << execTime << "\n";
+            combinations.emplace_back(pool, nb_thread);
         }
+    }
+
+    // Mélanger les combinaisons
+    std::random_device rd;
+    std::mt19937 g(rd());
+    std::ranges::shuffle(combinations, g);
+
+    size_t i = 0;
+    for (const auto &[pool, nb_thread] : combinations)
+    {
+
+        start = std::chrono::steady_clock::now();
+
+        // Appel de la fonction à mesurer
+        compute_with_pixel_jobs(scene, lights, pixels, pool, nb_thread);
+
+        end = std::chrono::steady_clock::now();
+        auto execTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+        // Affichage dans la console
+        std::cout << std::setw(15) << std::left << pool << std::setw(15) << std::left << nb_thread << std::setw(20)
+                  << std::left << execTime << i + 1 << "/" << combinations.size() << "\n";
+
+        // Écriture dans le fichier CSV
+        file << pool << "," << nb_thread << "," << execTime << "\n";
+        i++;
     }
 
     delete[] pixels;
 }
 
 /*
-Time for compute_raw : 4648ms.
+
+Test will be done with 1000 spheres and a scene of size 1000x1000.
+Time for compute_raw : 4811ms.
 Pool Size      Nb Threads     Execution Time (ms)
 --------------------------------------------------
-100            1              7611
-100            2              4587
-100            4              3019
-100            8              2105
-100            12             2059
-100            16             1651
-100            20             1781
-100            24             3047
-100            60             9342
-1000           1              6180
-1000           2              3791
-1000           4              2687
-1000           8              1908
-1000           12             1678
-1000           16             1586
-1000           20             1597
-1000           24             2292
-1000           60             8424
-2000           1              6378
-2000           2              3891
-2000           4              2708
-2000           8              1989
-2000           12             1807
-2000           16             1591
-2000           20             1511
-2000           24             1856
-2000           60             7365
-5000           1              6540
-5000           2              3798
-5000           4              2674
-5000           8              2236
-5000           12             1657
-5000           16             1581
-5000           20             1430
-5000           24             1478
-5000           60             4934
- */
+100            2              3900
+100            4              2661
+100            8              1965
+100            12             1790
+100            16             1610
+100            20             1686
+100            24             2501
+100            60             7870
+
+1000           2              3906
+1000           4              2670
+1000           8              1999
+1000           12             1750
+1000           16             1666
+1000           20             1580
+1000           24             1918
+1000           60             6413
+
+2000           2              3957
+2000           4              2668
+2000           8              1983
+2000           12             1682
+2000           16             1588
+2000           20             1501
+2000           24             1720
+2000           60             5698
+
+5000           2              3898
+5000           4              2711
+5000           8              1949
+5000           12             1733
+5000           16             1591
+5000           20             1450
+5000           24             1407
+5000           60             3565
+
+*/

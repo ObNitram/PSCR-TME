@@ -23,3 +23,6 @@ autom4te.cache
 # exec
 exo*
 !exo*/
+
+# python
+venv

@@ -7,9 +7,9 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="RiderCppLiveTemplatesSettings" type="string" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -22,14 +22,12 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="tme8" targetName="gmock" />
-      <config projectName="tme8" targetName="tme8_client" />
-      <config projectName="tme8" targetName="gtest_main" />
-      <config projectName="tme8" targetName="tme8_server" />
-      <config projectName="tme8" targetName="PscrLib" />
-      <config projectName="tme8" targetName="gtest" />
-      <config projectName="tme8" targetName="build_all" />
-      <config projectName="tme8" targetName="gmock_main" />
+      <config projectName="tme5" targetName="gtest_main" />
+      <config projectName="tme5" targetName="PscrLib" />
+      <config projectName="tme5" targetName="gtest" />
+      <config projectName="tme5" targetName="gmock_main" />
+      <config projectName="tme5" targetName="gmock" />
+      <config projectName="tme5" targetName="tme5" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -42,23 +40,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/TME8/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TME8/ServerSocket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TME8/src/ServerSocket.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TME8/src/Socket.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PSCR-TME.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PSCR-TME.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/.cproject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/.project" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/Makefile.am" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/configure.ac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/src/Makefile.am" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/src/ServerSocket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TME8/src/ServerSocket.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/src/Socket.h" beforeDir="false" afterPath="$PROJECT_DIR$/TME8/src/Socket.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TME8/src/client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME8/src/client.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TME8/src/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME8/src/server.cpp" afterDir="false" />
     </list>
@@ -70,7 +59,7 @@
   <component name="ClangdSettings">
     <option name="clangTidyViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -107,8 +96,12 @@
     <setting file="file://$PROJECT_DIR$/TME7/src/pipe/pipe.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME7/src/prod_cons/Stack.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME7/src/prod_cons/prod_cons.cpp" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TME8/ServerSocket.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/ServerSocket.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/ServerSocket.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/Socket.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME8/src/client.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/server.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src/server.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/private/String.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/List.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/String.hpp" root0="FORCE_HIGHLIGHTING" />
@@ -133,59 +126,60 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.client.cpp.executor": "Run",
-    "CMake Application.MyApp.executor": "Run",
-    "CMake Application.MyString.executor": "Run",
-    "CMake Application.PscrLib.executor": "Run",
-    "CMake Application.Tpe2.executor": "Run",
-    "CMake Application.VadorvsLuke.executor": "Run",
-    "CMake Application.star_wars.executor": "Run",
-    "CMake Application.tme4.executor": "Run",
-    "CMake Application.tme5.executor": "Run",
-    "CMake Application.tme6.executor": "Run",
-    "CMake Application.tme6_fork.executor": "Run",
-    "CMake Application.tme7.executor": "Run",
-    "CMake Application.tme8_client.executor": "Run",
-    "CMake Application.tme8_server.executor": "Run",
-    "CMake Debug.MyString.executor": "Debug",
-    "CMake Debug.PscrLib.executor": "Debug",
-    "CMake Debug.TME2.executor": "Debug",
-    "CTest Application.All CTest.executor": "Run",
-    "Google Test.All in PscrLib.executor": "Run",
-    "Google Test.All in PscrLibTests.executor": "Run",
-    "Google Test.HashTableTest.IteratorBeginEnd.executor": "Debug",
-    "Google Test.PscrLibTests.executor": "Run",
-    "Google Test.StringTest.Constructor.executor": "Run",
-    "Google Test.StringTest.CopyAssignment.executor": "Run",
-    "Google Test.StringTest.CopyConstructor.executor": "Run",
-    "Google Test.VectorTest.executor": "Valgrind",
-    "Makefile Target.Makefile (1).executor": "Run",
-    "Makefile Target.Makefile.executor": "Run",
-    "Makefile Target.Unnamed.executor": "Run",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ctest.advertisement.all.test.configuration.is.created": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.client.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.MyApp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.MyString.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.PscrLib.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Tpe2.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.VadorvsLuke.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.star_wars.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme4.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme5.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme6.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme6_fork.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme7.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme8_client.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme8_server.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.MyString.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.PscrLib.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.TME2.executor&quot;: &quot;Debug&quot;,
+    &quot;CTest Application.All CTest.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.All in PscrLib.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.All in PscrLibTests.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.HashTableTest.IteratorBeginEnd.executor&quot;: &quot;Debug&quot;,
+    &quot;Google Test.PscrLibTests.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.StringTest.Constructor.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.StringTest.CopyAssignment.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.StringTest.CopyConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.VectorTest.executor&quot;: &quot;Valgrind&quot;,
+    &quot;Makefile Target.Makefile (1).executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.Makefile.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TME8/src" />
@@ -202,14 +196,14 @@
       <recent name="$PROJECT_DIR$/TME5/src/lib/private" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.tme8_client">
-    <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme8" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme8" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
+  <component name="RunManager" selected="CMake Application.tme5">
+    <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VectorTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme8" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme8" RUN_TARGET_NAME="PscrLibTests" TEST_PATTERN="VectorTest.*:VectorTest/*.*:VectorTest.*/*:*/VectorTest.*/*:*/VectorTest/*.*" TEST_MODE="PATTERN">
+    <configuration name="VectorTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_PATTERN="VectorTest.*:VectorTest/*.*:VectorTest.*/*:*/VectorTest.*/*:*/VectorTest/*.*" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -218,27 +212,12 @@
     <configuration name="TME2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
       <method v="2" />
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="tme5" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="tme5" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="tme5">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="build_all" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme8" TARGET_NAME="build_all" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tme7" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/bin/cat LICENSE | /bin/wc -l" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme8" TARGET_NAME="tme7" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme8" RUN_TARGET_NAME="tme7">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tme8_client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme8" TARGET_NAME="tme8_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme8" RUN_TARGET_NAME="tme8_client">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="tme8_server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme8" TARGET_NAME="tme8_server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme8" RUN_TARGET_NAME="tme8_server">
+    <configuration name="tme7" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/bin/cat LICENSE | /bin/wc -l" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="tme7" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="tme7">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -294,20 +273,42 @@
       </texify-makeindex>
       <method v="2" />
     </configuration>
+    <configuration name="analyse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PSCR-TME" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TME5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TME5/analyse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="C/C++ File.client.cpp" />
       <item itemvalue="CMake Application.tme7" />
-      <item itemvalue="CMake Application.build_all" />
-      <item itemvalue="CMake Application.tme8_client" />
-      <item itemvalue="CMake Application.tme8_server" />
+      <item itemvalue="CMake Application.tme5" />
       <item itemvalue="CMake Debug.TME2" />
       <item itemvalue="Google Test.All in PscrLibTests" />
       <item itemvalue="Google Test.HashTableTest.IteratorBeginEnd" />
       <item itemvalue="Google Test.VectorTest" />
       <item itemvalue="Makefile Target.Makefile" />
+      <item itemvalue="Python.analyse" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.analyse" />
         <item itemvalue="C/C++ File.client.cpp" />
         <item itemvalue="CMake Debug.TME2" />
         <item itemvalue="Google Test.VectorTest" />
@@ -371,7 +372,15 @@
       <workItem from="1733476100633" duration="1650000" />
       <workItem from="1733489008935" duration="10239000" />
       <workItem from="1733500202186" duration="2014000" />
-      <workItem from="1733502241558" duration="2246000" />
+      <workItem from="1733502241558" duration="5028000" />
+      <workItem from="1733839548313" duration="900000" />
+      <workItem from="1733840457791" duration="835000" />
+      <workItem from="1733841583190" duration="203000" />
+      <workItem from="1733841799907" duration="171000" />
+      <workItem from="1733842622042" duration="149000" />
+      <workItem from="1733844681899" duration="540000" />
+      <workItem from="1733845281919" duration="1299000" />
+      <workItem from="1733846633308" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />
@@ -565,7 +574,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733499120753</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733504681596</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733504681597</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -588,7 +605,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="# add remove upgrade fix format refactor change&#10;configure environment &#10; - add a global library&#10; - add gtest&#10; &#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;prepare to implement and test Vector, List and HashMap&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;#add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
@@ -613,7 +629,8 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme7&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme5&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme6&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;update tme6&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

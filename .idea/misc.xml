@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="Black">
+    <option name="sdkName" value="Python 3.12 virtualenv at ~/Projects/cours/pscr/PSCR-TME/TME5/venv" />
+  </component>
   <component name="CMakePythonSetting">
     <option name="pythonIntegrationState" value="YES" />
   </component>
-  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/TME8">
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$/TME5">
     <contentRoot DIR="$PROJECT_DIR$" />
   </component>
 </project>
