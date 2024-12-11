@@ -121,13 +121,32 @@ int compute_with_pixel_jobs(pr::Scene &scene, std::vector<pr::Vec3D> &lights, pr
     return 0;
 }
 
+// exportImage("toto.ppm", scene.getWidth(), scene.getHeight(), pixels);
+
 int main(int argc, char *argv[])
 {
-    // exportImage("toto.ppm", scene.getWidth(), scene.getHeight(), pixels);
+    int nb_de_sphere = 1000;
+    int scene_size = 1000;
+    std::string csv_name = "../analyse/execution_results_sort_";
 
-    constexpr int nb_de_sphere = 1000;
-    constexpr int scene_size = 1000;
-    std::string csv_name = "../execution_results";
+    for (int i = 1; i < argc; ++i) {
+        std::string arg = argv[i];
+        if (arg.find("--nb_de_sphere=") == 0) {
+            nb_de_sphere = std::stoi(arg.substr(15));
+        } else if (arg.find("--scene_size=") == 0) {
+            scene_size = std::stoi(arg.substr(13));
+        } else if (arg.find("--csv_name=") == 0) {
+            csv_name = arg.substr(11);
+        } else {
+            std::cerr << "Argument inconnu : " << arg << std::endl;
+            return 1;
+        }
+    }
+
+    // Affichage pour vérification
+    std::cout << "Nombre de sphères: " << nb_de_sphere << std::endl;
+    std::cout << "Taille de la scène: " << scene_size << std::endl;
+    std::cout << "Nom du fichier CSV: " << csv_name << std::endl;
 
     pr::Scene scene(scene_size, scene_size);
     std::default_random_engine re(std::chrono::system_clock::now().time_since_epoch().count());
@@ -155,9 +174,20 @@ int main(int argc, char *argv[])
     std::cout << "Time for compute_raw : " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()
               << "ms.\n";
 
-    std::vector poolSizes = {10,   50,   100,  200,  400,  800,  1000, 1200, 1600,
-                             2000, 2500, 3000, 4000, 5000, 6000, 8000, 10000};
+    std::vector<int> poolSizes = {};
+
+    int max_jobs_size = scene_size * scene_size;
+    int fraction_size = max_jobs_size / 10;
+/*
+    for (int i = 1; i < 12; ++i) {
+        poolSizes.push_back(fraction_size * i);
+    }
+*/
+
+
     std::vector threadCounts = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 30, 35, 40, 50, 60};
+
+    poolSizes = {2, 4, 8, 16, 32, 64, 128, 254, 512, 1024, 2048, 4096};
 
     // Afficher les résultats
     std::cout << std::setw(15) << std::left << "Pool Size" << std::setw(15) << std::left << "Nb Threads"
@@ -188,7 +218,7 @@ int main(int argc, char *argv[])
     // Mélanger les combinaisons
     std::random_device rd;
     std::mt19937 g(rd());
-    std::ranges::shuffle(combinations, g);
+    //std::ranges::shuffle(combinations, g);
 
     size_t i = 0;
     for (const auto &[pool, nb_thread] : combinations)

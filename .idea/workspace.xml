@@ -7,9 +7,9 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="RiderCppLiveTemplatesSettings" type="string" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -40,16 +40,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PSCR-TME.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PSCR-TME.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_in_PscrLibTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_100000s_100x100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_10000sphere_100x100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_10000sphere_100x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_1000x1000.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_1000x1000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_100x100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_100x100.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/src/client.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME8/src/client.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME8/src/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME8/src/server.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +229,6 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="EXTERNAL_TOOL_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-external>
-        <program>PYTHONTEX</program>
-        <main-file />
-        <work-dir />
-      </texify-external>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
       <texify>
         <compiler>PDFLATEX</compiler>
@@ -262,15 +255,6 @@
       <makefile filename="$PROJECT_DIR$/TME4/Makefile" target="" workingDirectory="" arguments="">
         <envs />
       </makefile>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-makeindex>
-        <program>MAKEINDEX</program>
-        <main-file />
-        <command-line-args />
-        <work-dir />
-      </texify-makeindex>
       <method v="2" />
     </configuration>
     <configuration name="analyse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -380,7 +364,10 @@
       <workItem from="1733842622042" duration="149000" />
       <workItem from="1733844681899" duration="540000" />
       <workItem from="1733845281919" duration="1299000" />
-      <workItem from="1733846633308" duration="4000" />
+      <workItem from="1733846633308" duration="128000" />
+      <workItem from="1733858474787" duration="56000" />
+      <workItem from="1733862991291" duration="887000" />
+      <workItem from="1733910442480" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />
@@ -582,7 +569,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733504681597</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733846752501</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733846752501</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -605,7 +600,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="# add remove upgrade fix format refactor change&#10;prepare to implement and test Vector, List and HashMap&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;#add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add List to PscrLib&#10;&#10;#[PR: #XX]" />
@@ -630,7 +624,8 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme5&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme6&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

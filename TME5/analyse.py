@@ -1,10 +1,10 @@
 # Import required libraries
+import os
+
 import pandas as pd  # For data manipulation and analysis
 import matplotlib.pyplot as plt  # For data visualization
 
-def main():
-    # Load the CSV file into a pandas DataFrame
-    file_path = 'execution_results_10000sphere_100x100.csv'
+def analyse( file_path: str):
 
     # Read the CSV file
     df = pd.read_csv(file_path)
@@ -48,4 +48,9 @@ def main():
 
 # Ensure the main function runs only when this script is executed directly
 if __name__ == "__main__":
-    main()
+    csv_directory = "./analyse"
+
+    for file in os.listdir(csv_directory):
+        if file.endswith(".csv"):
+            file_path = os.path.join(csv_directory, file)
+            analyse(file_path)
