@@ -1,0 +1,12 @@
+---
+IndentWidth: 4
+UseTab: Never
+
+ColumnLimit: 120
+
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+
+BreakBeforeBraces: Allman

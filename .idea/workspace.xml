@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="RiderCppLiveTemplatesSettings" type="string" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="tme5" targetName="gtest_main" />
+      <config projectName="tme5" targetName="PscrLib" />
+      <config projectName="tme5" targetName="gtest" />
+      <config projectName="tme5" targetName="gmock_main" />
+      <config projectName="tme5" targetName="gmock" />
+      <config projectName="tme5" targetName="tme5" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" GENERATION_OPTIONS="-G &quot;Unix Makefiles&quot;" />
+      <configuration PROFILE_NAME="RelWithDebInfo" ENABLED="true" CONFIG_NAME="RelWithDebInfo" />
+      <configuration PROFILE_NAME="MinSizeRel" ENABLED="true" CONFIG_NAME="MinSizeRel" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;update &#10;&#10;#[PR: #XX]">
+      <change afterPath="$PROJECT_DIR$/TME5/setup_benchmark.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_100000sphere_100x100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/run_benchmark.sh" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/run_benchmark.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="clangTidyViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ObNitram&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:ObNitram/PSCR-TME.git&quot;,
+    &quot;accountId&quot;: &quot;5867720d-aa23-47e5-afa2-8c23349151a3&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TME1/MyString/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME2/tme2/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Job.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Pool.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Queue.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Vec3D.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/obnitram/Projects/cours/pscr/PSCR-TME/TME5/src/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME5/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME7/src/pipe/pipe.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME7/src/prod_cons/Stack.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME7/src/prod_cons/prod_cons.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/ServerSocket.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/ServerSocket.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/Socket.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/client.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TME8/src/server.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/private/String.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/public/List.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/public/String.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/lib/src/public/Vector.hpp" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="2.2" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2mezQAEKozzqC6VPjiC2byQq5nY" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.client.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.MyApp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.MyString.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.PscrLib.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Tpe2.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.VadorvsLuke.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.star_wars.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme4.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme5.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme6.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme6_fork.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme7.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme8_client.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.tme8_server.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Debug.MyString.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.PscrLib.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Debug.TME2.executor&quot;: &quot;Debug&quot;,
+    &quot;CTest Application.All CTest.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.All in PscrLib.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.All in PscrLibTests.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.HashTableTest.IteratorBeginEnd.executor&quot;: &quot;Debug&quot;,
+    &quot;Google Test.PscrLibTests.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.StringTest.Constructor.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.StringTest.CopyAssignment.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.StringTest.CopyConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.VectorTest.executor&quot;: &quot;Valgrind&quot;,
+    &quot;Makefile Target.Makefile (1).executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.Makefile.executor&quot;: &quot;Run&quot;,
+    &quot;Makefile Target.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TME8/src" />
+      <recent name="$PROJECT_DIR$/TME8" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/TME7" />
+      <recent name="$PROJECT_DIR$/TME4" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/src/private" />
+      <recent name="$PROJECT_DIR$/TME7/src/prod_cons" />
+      <recent name="$PROJECT_DIR$/TME7/src/pipe" />
+      <recent name="$PROJECT_DIR$/TME7/src" />
+      <recent name="$PROJECT_DIR$/TME5/src/lib/private" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.tme5">
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VectorTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_PATTERN="VectorTest.*:VectorTest/*.*:VectorTest.*/*:*/VectorTest.*/*:*/VectorTest/*.*" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TME2" type="CMakeListConfigurationType" factoryName="CMakeListConfigurationFactory" temporary="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="tme5" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="tme5" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="tme5">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tme7" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="/bin/cat LICENSE | /bin/wc -l" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="tme7" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="tme7">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="client.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="PSCR-TME" TARGET_NAME="client.cpp" CONFIG_NAME="client.cpp">
+      <option name="sourceFile" value="TME8/src/client.cpp" />
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="EXTERNAL_TOOL_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-external>
+        <program>PYTHONTEX</program>
+        <main-file />
+        <work-dir />
+      </texify-external>
+      <method v="2" />
+    </configuration>
+    <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
+      <makefile filename="$PROJECT_DIR$/TME4/Makefile" target="" workingDirectory="" arguments="">
+        <envs />
+      </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file />
+        <command-line-args />
+        <work-dir />
+      </texify-makeindex>
+      <method v="2" />
+    </configuration>
+    <configuration name="analyse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PSCR-TME" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TME5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TME5/analyse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="C/C++ File.client.cpp" />
+      <item itemvalue="CMake Application.tme7" />
+      <item itemvalue="CMake Application.tme5" />
+      <item itemvalue="CMake Debug.TME2" />
+      <item itemvalue="Google Test.All in PscrLibTests" />
+      <item itemvalue="Google Test.HashTableTest.IteratorBeginEnd" />
+      <item itemvalue="Google Test.VectorTest" />
+      <item itemvalue="Makefile Target.Makefile" />
+      <item itemvalue="Python.analyse" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.analyse" />
+        <item itemvalue="C/C++ File.client.cpp" />
+        <item itemvalue="CMake Debug.TME2" />
+        <item itemvalue="Google Test.VectorTest" />
+        <item itemvalue="Google Test.HashTableTest.IteratorBeginEnd" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="" />
+      <created>1727451812939</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727451812939</updated>
+      <workItem from="1727451815261" duration="1550000" />
+      <workItem from="1727453380967" duration="10393000" />
+      <workItem from="1727466699563" duration="3408000" />
+      <workItem from="1727522787262" duration="30000" />
+      <workItem from="1727534024962" duration="4625000" />
+      <workItem from="1727554306986" duration="5888000" />
+      <workItem from="1727612445320" duration="6354000" />
+      <workItem from="1727697483565" duration="569000" />
+      <workItem from="1727698572514" duration="1920000" />
+      <workItem from="1727778571143" duration="2518000" />
+      <workItem from="1727941337391" duration="43000" />
+      <workItem from="1728041986314" duration="2142000" />
+      <workItem from="1728044213263" duration="7871000" />
+      <workItem from="1728052159849" duration="54000" />
+      <workItem from="1728052252201" duration="505000" />
+      <workItem from="1728065428928" duration="173000" />
+      <workItem from="1728065615374" duration="2317000" />
+      <workItem from="1728067945969" duration="7254000" />
+      <workItem from="1728115093482" duration="2961000" />
+      <workItem from="1728131351842" duration="369000" />
+      <workItem from="1728158846094" duration="1000" />
+      <workItem from="1728226890616" duration="1378000" />
+      <workItem from="1728236396212" duration="2280000" />
+      <workItem from="1728238686307" duration="2464000" />
+      <workItem from="1728329096695" duration="382000" />
+      <workItem from="1728627461585" duration="6278000" />
+      <workItem from="1728648112623" duration="6665000" />
+      <workItem from="1728752362410" duration="4000" />
+      <workItem from="1729360273679" duration="716000" />
+      <workItem from="1729501564856" duration="457000" />
+      <workItem from="1729504059645" duration="2967000" />
+      <workItem from="1729511725156" duration="4148000" />
+      <workItem from="1730294238069" duration="33000" />
+      <workItem from="1730661661010" duration="892000" />
+      <workItem from="1731080247544" duration="12000" />
+      <workItem from="1731184931757" duration="2000" />
+      <workItem from="1731675863528" duration="666000" />
+      <workItem from="1731677826166" duration="4738000" />
+      <workItem from="1731695496777" duration="1640000" />
+      <workItem from="1731915732234" duration="55000" />
+      <workItem from="1732009914770" duration="2569000" />
+      <workItem from="1732015057020" duration="912000" />
+      <workItem from="1733427191693" duration="5317000" />
+      <workItem from="1733474460069" duration="1005000" />
+      <workItem from="1733475472979" duration="591000" />
+      <workItem from="1733476100633" duration="1650000" />
+      <workItem from="1733489008935" duration="10239000" />
+      <workItem from="1733500202186" duration="2014000" />
+      <workItem from="1733502241558" duration="5028000" />
+      <workItem from="1733839548313" duration="900000" />
+      <workItem from="1733840457791" duration="835000" />
+      <workItem from="1733841583190" duration="203000" />
+      <workItem from="1733841799907" duration="171000" />
+      <workItem from="1733842622042" duration="149000" />
+      <workItem from="1733844681899" duration="540000" />
+      <workItem from="1733845281919" duration="1299000" />
+      <workItem from="1733846633308" duration="128000" />
+      <workItem from="1733858474787" duration="56000" />
+      <workItem from="1733862991291" duration="887000" />
+      <workItem from="1733910442480" duration="1100000" />
+      <workItem from="1734006170407" duration="451000" />
+      <workItem from="1734006639825" duration="3756000" />
+      <workItem from="1734013711607" duration="7000" />
+    </task>
+    <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727467444894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1727467444894</updated>
+    </task>
+    <task id="LOCAL-00002" summary="# add remove upgrade fix format refactor change&#10;configure environment &#10; - add a global library&#10; - add gtest&#10; &#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727467527937</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727467527937</updated>
+    </task>
+    <task id="LOCAL-00003" summary="# add remove upgrade fix format refactor change&#10;prepare to implement and test Vector, List and HashMap&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727470101790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727470101790</updated>
+    </task>
+    <task id="LOCAL-00004" summary="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727557395761</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727557395761</updated>
+    </task>
+    <task id="LOCAL-00005" summary="# add remove upgrade fix format refactor change&#10;add List to PscrLib&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727613898578</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727613898578</updated>
+    </task>
+    <task id="LOCAL-00006" summary="# add remove upgrade fix format refactor change&#10;add HashTable to PscrLib&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727618793591</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1727618793591</updated>
+    </task>
+    <task id="LOCAL-00007" summary="# add remove upgrade fix format refactor change&#10;add class configuration of HashTable and Vector&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727697930512</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727697930512</updated>
+    </task>
+    <task id="LOCAL-00008" summary="# add remove upgrade fix format refactor change&#10;fix memory leak in Vector&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727699468392</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727699468392</updated>
+    </task>
+    <task id="LOCAL-00009" summary="# add remove upgrade fix format refactor change&#10;fix Vector copie operator &#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727700152664</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1727700152664</updated>
+    </task>
+    <task id="LOCAL-00010" summary="# add remove upgrade fix format refactor change&#10;format&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727700338265</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1727700338265</updated>
+    </task>
+    <task id="LOCAL-00011" summary="# add remove upgrade fix format refactor change&#10;upgrade String copy operator &#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727700477324</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1727700477324</updated>
+    </task>
+    <task id="LOCAL-00012" summary="# add remove upgrade fix format refactor change&#10;upgrade List to use tail to push_back in O(1)&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1727781018008</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1727781018009</updated>
+    </task>
+    <task id="LOCAL-00013" summary="upgrade List to use tail to push_back in O(1)">
+      <option name="closed" value="true" />
+      <created>1728044716872</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1728044716872</updated>
+    </task>
+    <task id="LOCAL-00014" summary="# add remove upgrade fix format refactor change&#10;[TPE 3] add iterator stuff to pscr lib&#10; - add iterator to Vector, List and HashTable&#10; - add count and count_if_equal to Core&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1728075147620</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1728075147620</updated>
+    </task>
+    <task id="LOCAL-00015" summary="# add remove upgrade fix format refactor change&#10;add assert in PscrLib&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1728131489790</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1728131489790</updated>
+    </task>
+    <task id="LOCAL-00016" summary="# add remove upgrade fix format refactor change&#10;fix HashTable iterator&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1728131604939</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1728131604939</updated>
+    </task>
+    <task id="LOCAL-00017" summary="# add remove upgrade fix format refactor change&#10;refactor Vector&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1728633735733</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1728633735734</updated>
+    </task>
+    <task id="LOCAL-00018" summary="# add remove upgrade fix format refactor change&#10;&#10;tme5&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1731695523766</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1731695523766</updated>
+    </task>
+    <task id="LOCAL-00019" summary="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1731695539128</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1731695539129</updated>
+    </task>
+    <task id="LOCAL-00020" summary="# add remove upgrade fix format refactor change&#10;&#10;tme7 : Semaphore, Memoire partagee&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1732015956298</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1732015956298</updated>
+    </task>
+    <task id="LOCAL-00021" summary="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733489035438</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1733489035438</updated>
+    </task>
+    <task id="LOCAL-00022" summary="# add remove upgrade fix format refactor change&#10;&#10;update tme7&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733490125646</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1733490125646</updated>
+    </task>
+    <task id="LOCAL-00023" summary="# add remove upgrade fix format refactor change&#10;&#10;update tme5&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733493130200</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1733493130200</updated>
+    </task>
+    <task id="LOCAL-00024" summary="# add remove upgrade fix format refactor change&#10;&#10;update tme6&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733499120753</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1733499120753</updated>
+    </task>
+    <task id="LOCAL-00025" summary="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733504681596</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1733504681597</updated>
+    </task>
+    <task id="LOCAL-00026" summary="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733846752501</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1733846752501</updated>
+    </task>
+    <task id="LOCAL-00027" summary="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733910478005</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910478005</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add List to PscrLib&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add HashTable to PscrLib&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add class configuration of HashTable and Vector&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;fix memory leak in Vector&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;fix Vector copie operator &#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;format&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;upgrade String copy operator &#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;upgrade List to use tail to push_back in O(1)&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;fix Vector move constructor &#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="upgrade List to use tail to push_back in O(1)" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;[TPE 3] add iterator stuff to pscr lib&#10; - add iterator to Vector, List and HashTable&#10; - add count and count_if_equal to Core&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add assert in PscrLib&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;fix HashTable iterator&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;refactor Vector&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme7 : Semaphore, Memoire partagee&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme7&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme7&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme5&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme6&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="../../../Projects/cours/pscr/PSCR-TME/lib/cmake-build-debug-coverage" NAME="All in PscrLibTests Coverage Results" MODIFIED="1727466569996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../Projects/cours/pscr/PSCR-TME/lib/cmake-build-debug-coverage" NAME="All in PscrLibTests Coverage Results" MODIFIED="1727780724808" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="gcov/llvm" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+</project>

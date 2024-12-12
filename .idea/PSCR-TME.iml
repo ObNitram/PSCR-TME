@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module classpath="External" external.linked.project.id="PSCR-TME" external.linked.project.path="$MODULE_DIR$/TME1/exo1" external.root.project.path="$MODULE_DIR$/TME1/exo1" external.system.id="Makefile" type="CPP_MODULE" version="4" />
+<module classpath="CMake" type="CPP_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Python" name="Python facet">
+      <configuration sdkName="Python 3.12 virtualenv at ~/Projects/cours/pscr/PSCR-TME/TME5/venv" />
+    </facet>
+  </component>
+</module>

@@ -1,31 +1,29 @@
-#ifndef SRC_SOCKET_H_
-#define SRC_SOCKET_H_
+#pragma once
 
+#include <iosfwd>
 #include <netinet/ip.h>
 #include <string>
-#include <iosfwd>
 
-namespace pr {
+namespace pr
+{
 
-class Socket {
-	int fd;
+class Socket
+{
+    int fileDescriptor;
 
-public :
-	Socket():fd(-1){}
-	Socket(int fd):fd(fd){}
+  public:
+    Socket() : fileDescriptor(-1) {}
+    Socket(int fd) : fileDescriptor(fd) {}
 
-	// tente de se connecter à l'hôte fourni
-	void connect(const std::string & host, int port);
-	void connect(in_addr ipv4, int port);
+    void connect(const std::string &host, int port);
+    void connect(in_addr ipv4, int port);
 
-	bool isOpen() const {return fd != -1;}
-	int getFD() { return fd ;}
+    [[nodiscard]] bool isOpen() const { return fileDescriptor != -1; }
+    [[nodiscard]] int getFD() const { return fileDescriptor; }
 
-	void close();
+    void close();
 };
 
-std::ostream & operator<< (std::ostream & os, struct sockaddr_in * addr);
+std::ostream &operator<<(std::ostream &os, struct sockaddr_in *addr);
 
-}
-
-#endif /* SRC_SOCKET_H_ */
+} // namespace pr

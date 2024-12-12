@@ -1,24 +1,23 @@
-#ifndef SRC_SERVERSOCKET_H_
-#define SRC_SERVERSOCKET_H_
+#pragma once
 
 #include "Socket.h"
 
-namespace pr {
+namespace pr
+{
 
-class ServerSocket {
-	int socketfd;
+class ServerSocket
+{
+    int socketfd;
 
-public :
-	// Demarre l'ecoute sur le port donne
-	ServerSocket(int port);
+  public:
+    ServerSocket(int port);
 
-	int getFD() { return socketfd;}
-	bool isOpen() const {return socketfd != -1;}
+    [[nodiscard]] int getFD() const { return socketfd; }
+    [[nodiscard]] bool isOpen() const { return socketfd != -1; }
 
-	Socket accept();
+    [[nodiscard]] Socket accept() const;
 
-	void close();
+    void close();
 };
 
-} // ns pr
-#endif /* SRC_SERVERSOCKET_H_ */
+} // namespace pr
