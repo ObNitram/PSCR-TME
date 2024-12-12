@@ -1,13 +1,18 @@
 # Import required libraries
 import os
-
 import pandas as pd  # For data manipulation and analysis
 import matplotlib.pyplot as plt  # For data visualization
 
-def analyse( file_path: str):
+def analyse(file_path: str):
 
     # Read the CSV file
     df = pd.read_csv(file_path)
+
+    # Extract the first row as reference
+    reference_row = df.iloc[0]
+
+    # Remove the first row from the DataFrame
+    df = df.drop(df.index[0])
 
     # Sort the DataFrame by 'Pool Size' and 'Nb Threads'
     df_sorted = df.sort_values(by=['Pool Size', 'Nb Threads'])
@@ -17,6 +22,12 @@ def analyse( file_path: str):
 
     # Create a plot
     plt.figure(figsize=(12, 8))
+
+    # Plot the reference line
+    plt.axhline(
+        y=reference_row['Execution Time (ms)'],
+        color='r', linestyle='--', label='Reference'
+    )
 
     # Loop through unique pool sizes and plot execution times
     for pool_size in df_sorted["Pool Size"].unique():
@@ -32,7 +43,8 @@ def analyse( file_path: str):
         )
 
     # Customize the plot
-    plt.title("Execution Time vs Number of Threads by Pool Size (Sorted)")
+    #plt.title("Execution Time vs Number of Threads by Pool Size (Sorted)")
+    plt.title(os.path.splitext(os.path.basename(file_path))[0])
     plt.xlabel("Number of Threads")
     plt.ylabel("Execution Time (ms)")
     plt.grid(True, linestyle='--', alpha=0.6)

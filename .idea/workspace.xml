@@ -39,17 +39,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
-      <change beforePath="$PROJECT_DIR$/.idea/csv-editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/csv-editor.xml" afterDir="false" />
+    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;update &#10;&#10;#[PR: #XX]">
+      <change afterPath="$PROJECT_DIR$/TME5/setup_benchmark.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TME5/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_100000s_100x100.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_10000sphere_100x100.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_10000sphere_100x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_1000x1000.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_1000x1000.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_100x100.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/execution_results_1000s_100x100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_100000sphere_100x100.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/run_benchmark.sh" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/run_benchmark.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,15 +87,13 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME1/MyString/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME2/tme2/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Job.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Pool.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Queue.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/lib/public/Vec3D.hpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///home/obnitram/Projects/cours/pscr/PSCR-TME/TME5/src/main.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME5/src/main.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME7/src/pipe/pipe.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME7/src/prod_cons/Stack.h" root0="FORCE_HIGHLIGHTING" />
@@ -102,7 +103,6 @@
     <setting file="file://$PROJECT_DIR$/TME8/src/Socket.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME8/src/client.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TME8/src/server.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src/server.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/private/String.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/List.hpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/lib/src/public/String.hpp" root0="FORCE_HIGHLIGHTING" />
@@ -198,6 +198,22 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.tme5">
+    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-bibtex>
+        <compiler />
+        <compiler-path />
+        <compiler-arguments />
+        <envs />
+        <main-file />
+        <aux-dir />
+      </texify-bibtex>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -229,32 +245,27 @@
         <option name="com.jetbrains.cidr.cpp.runfile.CppFileBuildBeforeRunTaskProvider$BasicBuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify>
-        <compiler>PDFLATEX</compiler>
-        <compiler-path />
-        <sumatra-path />
-        <pdf-viewer>OKULAR</pdf-viewer>
-        <viewer-command />
-        <compiler-arguments />
-        <envs />
-        <before-run-command />
+    <configuration default="true" type="EXTERNAL_TOOL_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-external>
+        <program>PYTHONTEX</program>
         <main-file />
-        <output-path>{projectDir}/out</output-path>
-        <auxil-path>{projectDir}/auxil</auxil-path>
-        <compile-twice>false</compile-twice>
-        <output-format>PDF</output-format>
-        <latex-distribution>TEXLIVE</latex-distribution>
-        <has-been-run>false</has-been-run>
-        <bib-run-config>[]</bib-run-config>
-        <makeindex-run-config>[]</makeindex-run-config>
-      </texify>
+        <work-dir />
+      </texify-external>
       <method v="2" />
     </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
       <makefile filename="$PROJECT_DIR$/TME4/Makefile" target="" workingDirectory="" arguments="">
         <envs />
       </makefile>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="MAKEINDEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify-makeindex>
+        <program>MAKEINDEX</program>
+        <main-file />
+        <command-line-args />
+        <work-dir />
+      </texify-makeindex>
       <method v="2" />
     </configuration>
     <configuration name="analyse" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -367,7 +378,10 @@
       <workItem from="1733846633308" duration="128000" />
       <workItem from="1733858474787" duration="56000" />
       <workItem from="1733862991291" duration="887000" />
-      <workItem from="1733910442480" duration="7000" />
+      <workItem from="1733910442480" duration="1100000" />
+      <workItem from="1734006170407" duration="451000" />
+      <workItem from="1734006639825" duration="3756000" />
+      <workItem from="1734013711607" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />
@@ -577,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733846752501</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]">
+      <option name="closed" value="true" />
+      <created>1733910478005</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1733910478005</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +622,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="# add remove upgrade fix format refactor change&#10;#add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add List to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add HashTable to PscrLib&#10;&#10;#[PR: #XX]" />
@@ -625,7 +646,8 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;update tme6&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

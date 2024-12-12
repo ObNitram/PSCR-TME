@@ -126,18 +126,26 @@ int compute_with_pixel_jobs(pr::Scene &scene, std::vector<pr::Vec3D> &lights, pr
 int main(int argc, char *argv[])
 {
     int nb_de_sphere = 1000;
-    int scene_size = 1000;
+    int scene_size = 100;
     std::string csv_name = "../analyse/execution_results_sort_";
 
-    for (int i = 1; i < argc; ++i) {
+    for (int i = 1; i < argc; ++i)
+    {
         std::string arg = argv[i];
-        if (arg.find("--nb_de_sphere=") == 0) {
+        if (arg.find("--nb_de_sphere=") == 0)
+        {
             nb_de_sphere = std::stoi(arg.substr(15));
-        } else if (arg.find("--scene_size=") == 0) {
+        }
+        else if (arg.find("--scene_size=") == 0)
+        {
             scene_size = std::stoi(arg.substr(13));
-        } else if (arg.find("--csv_name=") == 0) {
+        }
+        else if (arg.find("--csv_name=") == 0)
+        {
             csv_name = arg.substr(11);
-        } else {
+        }
+        else
+        {
             std::cerr << "Argument inconnu : " << arg << std::endl;
             return 1;
         }
@@ -171,24 +179,25 @@ int main(int argc, char *argv[])
     std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
     compute_raw(scene, lights, pixels);
     std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-    std::cout << "Time for compute_raw : " << std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count()
-              << "ms.\n";
+
+    auto execTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+    std::cout << "Time for compute_raw : " << execTime << "ms.\n";
 
     std::vector<int> poolSizes = {};
 
     int max_jobs_size = scene_size * scene_size;
     int fraction_size = max_jobs_size / 10;
-/*
-    for (int i = 1; i < 12; ++i) {
-        poolSizes.push_back(fraction_size * i);
-    }
-*/
-
+    /*
+        for (int i = 1; i < 12; ++i) {
+            poolSizes.push_back(fraction_size * i);
+        }
+    */
 
     std::vector threadCounts = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 30, 35, 40, 50, 60};
 
     poolSizes = {2, 4, 8, 16, 32, 64, 128, 254, 512, 1024, 2048, 4096};
-
+    poolSizes.push_back(max_jobs_size);
     // Afficher les résultats
     std::cout << std::setw(15) << std::left << "Pool Size" << std::setw(15) << std::left << "Nb Threads"
               << std::setw(20) << std::left << "Execution Time (ms)"
@@ -203,6 +212,8 @@ int main(int argc, char *argv[])
         return 1;
     }
     file << "Pool Size,Nb Threads,Execution Time (ms)\n";
+
+    file << "0" << "," << "0" << "," << execTime << "\n";
 
     // Créer toutes les combinaisons possibles
     std::vector<std::pair<int, int>> combinations;
@@ -230,7 +241,7 @@ int main(int argc, char *argv[])
         compute_with_pixel_jobs(scene, lights, pixels, pool, nb_thread);
 
         end = std::chrono::steady_clock::now();
-        auto execTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+        execTime = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
         // Affichage dans la console
         std::cout << std::setw(15) << std::left << pool << std::setw(15) << std::left << nb_thread << std::setw(20)
