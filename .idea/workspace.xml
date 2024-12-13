@@ -40,20 +40,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;update &#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/TME5/setup_benchmark.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_100000sphere_100x100.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/run_benchmark.sh" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/run_benchmark.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/_20241212__100000sphere_10x10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/_20241212__10000sphere_10x10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/_20241212__1000sphere_10x10.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TME5/_20241212__10sphere_10x10.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,60 +117,60 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ File.client.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.MyApp.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.MyString.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.PscrLib.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Tpe2.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.VadorvsLuke.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.star_wars.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme4.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme5.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme6.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme6_fork.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme7.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme8_client.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.tme8_server.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Debug.MyString.executor&quot;: &quot;Debug&quot;,
-    &quot;CMake Debug.PscrLib.executor&quot;: &quot;Debug&quot;,
-    &quot;CMake Debug.TME2.executor&quot;: &quot;Debug&quot;,
-    &quot;CTest Application.All CTest.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.All in PscrLib.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.All in PscrLibTests.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.HashTableTest.IteratorBeginEnd.executor&quot;: &quot;Debug&quot;,
-    &quot;Google Test.PscrLibTests.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.StringTest.Constructor.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.StringTest.CopyAssignment.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.StringTest.CopyConstructor.executor&quot;: &quot;Run&quot;,
-    &quot;Google Test.VectorTest.executor&quot;: &quot;Valgrind&quot;,
-    &quot;Makefile Target.Makefile (1).executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.Makefile.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Python.analyse.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.client.cpp.executor": "Run",
+    "CMake Application.MyApp.executor": "Run",
+    "CMake Application.MyString.executor": "Run",
+    "CMake Application.PscrLib.executor": "Run",
+    "CMake Application.Tpe2.executor": "Run",
+    "CMake Application.VadorvsLuke.executor": "Run",
+    "CMake Application.star_wars.executor": "Run",
+    "CMake Application.tme4.executor": "Run",
+    "CMake Application.tme5.executor": "Run",
+    "CMake Application.tme6.executor": "Run",
+    "CMake Application.tme6_fork.executor": "Run",
+    "CMake Application.tme7.executor": "Run",
+    "CMake Application.tme8_client.executor": "Run",
+    "CMake Application.tme8_server.executor": "Run",
+    "CMake Debug.MyString.executor": "Debug",
+    "CMake Debug.PscrLib.executor": "Debug",
+    "CMake Debug.TME2.executor": "Debug",
+    "CTest Application.All CTest.executor": "Run",
+    "Google Test.All in PscrLib.executor": "Run",
+    "Google Test.All in PscrLibTests.executor": "Run",
+    "Google Test.HashTableTest.IteratorBeginEnd.executor": "Debug",
+    "Google Test.PscrLibTests.executor": "Run",
+    "Google Test.StringTest.Constructor.executor": "Run",
+    "Google Test.StringTest.CopyAssignment.executor": "Run",
+    "Google Test.StringTest.CopyConstructor.executor": "Run",
+    "Google Test.VectorTest.executor": "Valgrind",
+    "Makefile Target.Makefile (1).executor": "Run",
+    "Makefile Target.Makefile.executor": "Run",
+    "Makefile Target.Unnamed.executor": "Run",
+    "Python.analyse.executor": "Run",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "ctest.advertisement.all.test.configuration.is.created": "true",
+    "git-widget-placeholder": "master2",
+    "last_opened_file_path": "/home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/TME8/src" />
@@ -198,22 +188,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.tme5">
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -622,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="# add remove upgrade fix format refactor change&#10;add Vector class to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add List to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add HashTable to PscrLib&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;add class configuration of HashTable and Vector&#10;&#10;#[PR: #XX]" />
@@ -647,7 +620,8 @@
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme8&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;tme5 analyse&#10;&#10;#[PR: #XX]" />
     <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]" />
-    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;TME5 : benchmark&#10;&#10;#[PR: #XX]" />
+    <MESSAGE value="# add remove upgrade fix format refactor change&#10;&#10;add tuxedo &#10;&#10;#[PR: #XX]" />
+    <option name="LAST_COMMIT_MESSAGE" value="# add remove upgrade fix format refactor change&#10;&#10;add tuxedo &#10;&#10;#[PR: #XX]" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
