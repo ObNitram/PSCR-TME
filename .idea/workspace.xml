@@ -39,21 +39,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;update &#10;&#10;#[PR: #XX]">
-      <change afterPath="$PROJECT_DIR$/TME5/setup_benchmark.sh" afterDir="false" />
+    <list default="true" id="c7909a60-c39c-4020-a467-946ec1d93988" name="Changes" comment="# add remove upgrade fix format refactor change&#10;&#10;&#10;#[PR: #XX]">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse.py" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_100000sphere_100x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10000sphere_100x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_1000sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_10sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_100000sphere_100x100.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10000sphere_100x100.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_1000sphere_1000x1000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/analyse/benchmark_tuxedo_martin_v2_10sphere_1000x1000.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TME5/run_benchmark.sh" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/run_benchmark.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TME5/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TME5/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/execution_results_sort__1000sphere_1000x1000.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +61,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -169,7 +163,7 @@
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/obnitram/Projects/cours/pscr/PSCR-TME/TME8/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -198,22 +192,6 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.tme5">
-    <configuration default="true" type="BIBTEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
-      <texify-bibtex>
-        <compiler />
-        <compiler-path />
-        <compiler-arguments />
-        <envs />
-        <main-file />
-        <aux-dir />
-      </texify-bibtex>
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HashTableTest.IteratorBeginEnd" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tme5" TARGET_NAME="PscrLibTests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="tme5" RUN_TARGET_NAME="PscrLibTests" TEST_CLASS="HashTableTest" TEST_METHOD="IteratorBeginEnd" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -251,6 +229,28 @@
         <main-file />
         <work-dir />
       </texify-external>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="LATEX_RUN_CONFIGURATION" factoryName="LaTeX configuration factory">
+      <texify>
+        <compiler>PDFLATEX</compiler>
+        <compiler-path />
+        <sumatra-path />
+        <pdf-viewer>OKULAR</pdf-viewer>
+        <viewer-command />
+        <compiler-arguments />
+        <envs />
+        <before-run-command />
+        <main-file />
+        <output-path>{projectDir}/out</output-path>
+        <auxil-path>{projectDir}/auxil</auxil-path>
+        <compile-twice>false</compile-twice>
+        <output-format>PDF</output-format>
+        <latex-distribution>TEXLIVE</latex-distribution>
+        <has-been-run>false</has-been-run>
+        <bib-run-config>[]</bib-run-config>
+        <makeindex-run-config>[]</makeindex-run-config>
+      </texify>
       <method v="2" />
     </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
@@ -382,6 +382,7 @@
       <workItem from="1734006170407" duration="451000" />
       <workItem from="1734006639825" duration="3756000" />
       <workItem from="1734013711607" duration="7000" />
+      <workItem from="1734084949902" duration="6000" />
     </task>
     <task id="LOCAL-00001" summary="# add remove upgrade fix format refactor change&#10;add clang-format and clang-tidy &#10;&#10;#[PR: #XX]">
       <option name="closed" value="true" />

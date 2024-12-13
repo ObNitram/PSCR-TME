@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CSV_NAME="./analyse/benchmark_tuxedo_martin"
+CSV_NAME="./analyse/benchmark_tuxedo_martin_50w_4hz"
 
 # Correction: Utiliser ${CSV_NAME} avec la commande date
 CSV_NAME="${CSV_NAME}_$(date +%Y%m%d)"
